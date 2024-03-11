@@ -1,4 +1,12 @@
 ///////swiper
+
+var splide = new Splide(".splide", {
+  type: "loop",
+  perPage: 3,
+  focus: "center",
+});
+
+splide.mount();
 var swiper = new Swiper(".porbazdid", {
   slidesPerView: 6,
   spaceBetween: 15,
@@ -10,7 +18,7 @@ var swiper = new Swiper(".porbazdid", {
 });
 var swiper = new Swiper(".tehran", {
   slidesPerView: 4,
-  spaceBetween: 25,
+  spaceBetween: 15,
   freeMode: true,
   navigation: {
     nextEl: ".swiper-button-next2",
@@ -19,7 +27,7 @@ var swiper = new Swiper(".tehran", {
 });
 var swiper = new Swiper(".jonob", {
   slidesPerView: 4,
-  spaceBetween: 25,
+  spaceBetween: 15,
   freeMode: true,
   navigation: {
     nextEl: ".swiper-button-next3",
@@ -28,7 +36,7 @@ var swiper = new Swiper(".jonob", {
 });
 var swiper = new Swiper(".vilaTehran", {
   slidesPerView: 4,
-  spaceBetween: 25,
+  spaceBetween: 15,
   freeMode: true,
   navigation: {
     nextEl: ".swiper-button-next4",
@@ -37,7 +45,7 @@ var swiper = new Swiper(".vilaTehran", {
 });
 var swiper = new Swiper(".vilaShomal", {
   slidesPerView: 4,
-  spaceBetween: 25,
+  spaceBetween: 15,
   freeMode: true,
   navigation: {
     nextEl: ".swiper-button-next5",
@@ -46,7 +54,7 @@ var swiper = new Swiper(".vilaShomal", {
 });
 var swiper = new Swiper(".majale", {
   slidesPerView: 5,
-  spaceBetween: 25,
+  spaceBetween: 15,
   freeMode: true,
   navigation: {
     nextEl: ".swiper-button-next6",
