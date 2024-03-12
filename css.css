@@ -22,6 +22,7 @@ html {
   --lightgray: lightgray;
   --gray: gray;
   --boderSwiper: rgba(211, 211, 211, 0.233);
+  --boderSwiper2: rgba(211, 211, 211, 0.438);
 }
 /* swiper */
 .swiper {
@@ -54,6 +55,7 @@ html {
   cursor: pointer;
 }
 button {
+  cursor: pointer;
   font-family: iransans;
 }
 .i-black {
@@ -142,15 +144,17 @@ header {
 }
 .flex {
   display: flex;
-  justify-content: center;
+  justify-content: start;
   align-items: center;
   gap: 60px;
+  width: 100%;
+  max-width: 656px;
 }
 .jostejo {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 500px;
+  width: 100%;
   height: 44px;
 }
 .jostejo > input {
@@ -266,6 +270,8 @@ header {
   width: 100%;
   height: 56px;
   background: none;
+  font-size: 16px;
+  font-family: iransans;
 }
 .inputhay-header > .tarikh-safar {
   z-index: 999 !important;
@@ -425,6 +431,9 @@ header {
   border-radius: 8px;
 }
 /* js and hidden item */
+.esm-shahrhaAsli {
+  cursor: pointer;
+}
 .name-shahr-checked {
   width: 425px;
   position: absolute;
@@ -440,7 +449,8 @@ header {
   font-weight: 100;
   color: var(--black);
 }
-.name-shahr-checked > .esm-shahrha {
+.name-shahr-checked > .esm-shahrha,
+.name-shahr-checked > .esm-shahrhaAsli {
   display: flex;
   align-items: center;
   padding: 15px 0;
@@ -448,20 +458,24 @@ header {
   gap: 15px;
   border-bottom: 1px solid rgba(211, 211, 211, 0.897);
 }
-.name-shahr-checked > .esm-shahrha > div {
+.name-shahr-checked > .esm-shahrha > div,
+.name-shahr-checked > .esm-shahrhaAsli > div {
   padding: 6px 12px;
   background-color: #f4f5ff;
   border-radius: 8px;
 }
-.name-shahr-checked > .esm-shahrha > div > i {
+.name-shahr-checked > .esm-shahrha > div > i,
+.name-shahr-checked > .esm-shahrhaAsli > div > i {
   color: var(--abisite);
 }
-.name-shahr-checked > .esm-shahrha > h5 {
+.name-shahr-checked > .esm-shahrha > h5,
+.name-shahr-checked > .esm-shahrhaAsli > h5 {
   color: rgb(8, 10, 26);
   font-size: 14px;
   font-weight: 100;
 }
-.name-shahr-checked > .esm-shahrha:hover {
+.name-shahr-checked > .esm-shahrha:hover,
+.name-shahr-checked > .esm-shahrhaAsli:hover {
   border-bottom: 1px solid var(--abibtn);
 }
 /*  */
@@ -1133,3 +1147,235 @@ strong {
   border: 1px solid var(--abibtn);
 }
 /* end sliderANDamar */
+/* footer */
+footer {
+  margin-top: 30px;
+  background-color: #fff;
+  box-shadow: 0 -1px 2px 0 rgba(65, 86, 217, 0.16);
+  padding-top: 40px;
+}
+.footer-margin-auto {
+  margin: 0 auto;
+  width: 100%;
+  max-width: 1228px;
+  padding: 0 15px;
+}
+/*  */
+.seta-itemha {
+  display: flex;
+  width: 100%;
+  margin: 10px 0;
+}
+.div-ashnaei-etemad {
+  display: flex;
+  flex: 2;
+  gap: 10px;
+}
+.data-ashnaeiha {
+  display: flex;
+  align-items: start;
+  justify-content: center;
+}
+.Ashnaei {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: center;
+  gap: 20px;
+}
+
+.data-ashnaeiha > ul {
+  list-style: none;
+  flex-direction: column;
+  display: flex;
+  font-size: 14px;
+  gap: 20px;
+  margin-left: 20px;
+  justify-content: center;
+  color: var(--placeholder);
+}
+.div-dovom-footer {
+  padding: 0px 30px;
+  flex: 2;
+  gap: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+}
+
+.div-dovom-footer > div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+.div-dovom-footer > input {
+  outline: none;
+  border: 1px solid #e6e7f2;
+  color: #080a1a;
+  height: 44px;
+  padding: 0 20px;
+  -webkit-appearance: none;
+  width: 100%;
+  max-width: 300px;
+  border-radius: 80px;
+  text-align: center;
+  padding: 0 15px;
+}
+.div-dovom-footer > input::placeholder {
+  font-size: 16px;
+  font-weight: 600;
+}
+.div-dovom-footer > div > a {
+  font-size: 32px;
+  text-decoration: none;
+  color: var(--black);
+}
+.div-dovom-footer > div > span {
+  border: 1px solid #eeeeee;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--abibtn);
+}
+.div-dovom-footer > .btn-1 {
+  width: 300px;
+  height: 40px;
+  border-radius: 80px;
+  border: none;
+  background-color: var(--abisite);
+  color: var(--white);
+  font-size: 16px;
+}
+.div-dovom-footer > .btn-2 {
+  width: 296px;
+  font-size: 16px;
+  height: 38px;
+  margin-top: 5px;
+  border: 1px solid var(--abisite);
+  color: var(--abisite);
+  background: none;
+  -webkit-transition: 300ms;
+  transition: 300ms;
+  border-radius: 100px;
+}
+.div-sevom-footer {
+  flex: 1;
+  display: flex;
+  gap: 10px;
+  flex-direction: column;
+}
+
+.div-sevom-footer > div {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: 44px;
+  gap: 10px;
+}
+.div-sevom-footer > div > a {
+  width: 112px;
+  height: 44px;
+  border-radius: 80px;
+  display: flex;
+  text-decoration: none;
+  align-items: center;
+  justify-content: center;
+  color: #4156d9;
+  border: 1px solid #eeeeee;
+  font-size: 23px;
+}
+/*  */
+.etemad {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  gap: 10px;
+  justify-content: start;
+}
+.etemad > img {
+  height: 105px;
+  width: 105px;
+}
+.Ashnaei > h5,
+.div-sevom-footer > h5,
+.etemad > h5,
+.div-dovom-footer > h5 {
+  font-size: 18px;
+  font-weight: 100;
+}
+
+/*  */
+
+.ejareha {
+  box-shadow: 0 -1px 2px 0 rgba(65, 86, 217, 0.16);
+
+  padding-top: 20px;
+  margin-bottom: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.ejareha > .samtRast {
+  display: flex;
+  gap: 20px;
+  width: 100%;
+  max-width: 500px;
+}
+.EjarevilaShomal,
+.EjarevilaJonob,
+.EjarevilaTehran {
+  display: flex;
+  gap: 15px;
+  flex-direction: column;
+}
+.EjarevilaShomal > h6,
+.EjarevilaJonob > h6,
+.EjarevilaTehran > h6 {
+  font-size: 18px;
+  font-weight: 100;
+}
+.EjarevilaShomal > a,
+.EjarevilaJonob > a,
+.EjarevilaTehran > a {
+  font-size: 14px;
+  text-decoration: none;
+  color: var(--lightblack);
+}
+
+.ejareha > .samtChap {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+.ejareha > .samtChap > a {
+  font-weight: 500;
+  padding: 5px 0;
+  text-decoration: none;
+  color: var(--lightblack);
+  font-size: 12px;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  border: 1px solid var(--boderSwiper2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 80px;
+  margin: 6px;
+}
+/*  */
+.hoghogh-site {
+  width: 100%;
+  margin-top: 20px;
+  box-shadow: 0 -1px 2px 0 rgba(65, 86, 217, 0.16);
+}
+.hoghogh-site-text {
+  font-size: 14px;
+  color: var(--lightblack);
+  padding: 10px 0;
+}
+/* footer */

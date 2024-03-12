@@ -69,24 +69,6 @@ const body = document.querySelector("body");
 body.addEventListener("click", function (event) {
   if (
     event.target.id === "input-nameshahr" ||
-    event.target.id === "teadad-nafarat" ||
-    event.target.className === "tarikh-safar cursor" ||
-    event.target.tagName === "SPAN" ||
-    event.target.tagName === "I" ||
-    event.target.className === "esm-shahrha" ||
-    event.target.tagName === "H3" ||
-    event.target.tagName === "H5" ||
-    event.target.className == "name-shahr-checked" ||
-    event.target.className == "location"
-  ) {
-    return null;
-  } else {
-    inputnameShahrchecked.classList.add("hidden");
-    inputnameShahr.style.border = "none";
-    body.style.overflow = "auto";
-  }
-  if (
-    event.target.id === "input-nameshahr" ||
     event.target.className === "tarikh-safar cursor" ||
     event.target.id === "teadad-nafarat" ||
     event.target.tagName === "SPAN" ||
@@ -96,16 +78,21 @@ body.addEventListener("click", function (event) {
     event.target.innerHTML === "-" ||
     event.target.id === "teadad-nafarat-input-checked"
   ) {
-    ////
     return null;
-  } else {
-    inputTeadadchecked.classList.add("hidden");
-    inputTeadad.style.border = "none";
-    body.style.overflow = "auto";
-  }
-  ////
-
-  if (
+  } else if (
+    event.target.id === "input-nameshahr" ||
+    event.target.id === "teadad-nafarat" ||
+    event.target.className === "tarikh-safar cursor" ||
+    event.target.tagName === "SPAN" ||
+    event.target.tagName === "I" ||
+    event.target.className === "esm-shahrhaAsli" ||
+    event.target.tagName === "H3" ||
+    event.target.tagName === "H5" ||
+    event.target.className == "name-shahr-checked" ||
+    event.target.className == "location"
+  ) {
+    return null;
+  } else if (
     event.target.id === "input-nameshahr" ||
     event.target.id === "teadad-nafarat" ||
     event.target.className === "tarikh-safar cursor" ||
@@ -123,11 +110,20 @@ body.addEventListener("click", function (event) {
   ) {
     return null;
   } else {
+    inputTeadadchecked.classList.add("hidden");
+    inputnameShahrchecked.classList.add("hidden");
     tanzimTarikhchecked.classList.add("hidden");
+    inputTeadadchecked.classList.add("hidden");
+    inputTeadad.style.border = "none";
     tanzimTarikh.style.border = "none";
+    inputnameShahr.style.border = "none";
     body.style.overflow = "auto";
   }
+
+  {
+  }
 });
+////
 
 //////click inputha
 //////header
@@ -263,7 +259,19 @@ for (let i = 1; i < 32; i++) {
   }
 }
 //////checked item
+/////////////////esm shahr
 
+let esmshahr = document.querySelectorAll(".esm-shahrhaAsli");
+esmshahr.forEach((div) => {
+  div.addEventListener("click", (event) => {
+    let inputnameshahrINPUT = document.getElementById("input-nameshahr");
+    inputnameshahrINPUT.value = event.target.innerText;
+    inputnameShahrchecked.classList.add("hidden");
+    inputnameShahr.style.border = "none";
+    body.style.overflow = "auto";
+  });
+});
+/////////////////esm shahr
 ///////data for swiper
 let dataSwiper = [
   {
@@ -819,7 +827,7 @@ vilaTehran.forEach((item) => {
 ////////////////////
 ////4
 let vilaShomal = dataSwiper.filter((a) => {
-  return a.id > 18 && a.id <= 24;
+  return a.id > 18 && a.id <= dataSwiper.length;
 });
 vilaShomal.forEach((item) => {
   let vilaShomal = document.getElementById("vilaShomal");
@@ -954,3 +962,228 @@ majale.forEach((item) => {
 });
 ////////////// data for majale
 //////////////////////////////////////////
+////////////// data for ashnaei
+let DATAashnaei = [
+  {
+    id: 1,
+    LI: "تماس با ما",
+  },
+  {
+    id: 2,
+    LI: "تماس با ما",
+  },
+  {
+    id: 3,
+    LI: "سوالات متداول",
+  },
+  {
+    id: 4,
+    LI: "حقوق کاربران",
+  },
+  {
+    id: 5,
+    LI: "قوانین استفاده از شب",
+  },
+  {
+    id: 6,
+    LI: "قواعد باز پرداخت وجه",
+  },
+  {
+    id: 7,
+    LI: "وبلاگ شب",
+  },
+  {
+    id: 8,
+    LI: "میزبان شوید",
+  },
+  {
+    id: 9,
+    LI: "نحوه کار شب",
+  },
+  {
+    id: 10,
+    LI: " همکاری سازمانی ",
+  },
+  {
+    id: 11,
+    LI: " فرصت های شغلی ",
+  },
+];
+
+let UL1 = DATAashnaei.filter((IDha) => {
+  return IDha.id <= 4;
+});
+
+UL1.forEach((item) => {
+  let ul = document.getElementById("data-ashnaei1");
+  let li = document.createElement("li");
+  li.innerText = item.LI;
+  ul.appendChild(li);
+});
+let UL2 = DATAashnaei.filter((IDha) => {
+  return IDha.id > 4 && IDha.id <= 8;
+});
+//////////////////
+UL2.forEach((item) => {
+  let ul = document.getElementById("data-ashnaei2");
+  let li = document.createElement("li");
+  li.innerText = item.LI;
+  ul.appendChild(li);
+});
+let UL3 = DATAashnaei.filter((IDha) => {
+  return IDha.id > 8 && IDha.id <= DATAashnaei.length;
+});
+//////////////////
+UL3.forEach((item) => {
+  let ul = document.getElementById("data-ashnaei3");
+  let li = document.createElement("li");
+  li.innerText = item.LI;
+  ul.appendChild(li);
+});
+////////////// data for ashnaei
+//////////////////////////
+////////////// data for EJARE
+let Ejare = [
+  {
+    id: 1,
+    text: "اجاره ویلا در چالوس",
+  },
+  {
+    id: 2,
+    text: "اجاره ویلا در کلاردشت",
+  },
+  {
+    id: 3,
+    text: "اجاره ویلا در تالش",
+  },
+  {
+    id: 4,
+    text: "اجاره ویلا در فومن",
+  },
+  {
+    id: 5,
+    text: "اجاره ویلا در بابلسر",
+  },
+  {
+    id: 6,
+    text: "اجاره ویلا در محمود اباد",
+  },
+  {
+    id: 7,
+    text: "اجاره ویلا در فریدون کنار",
+  },
+  {
+    id: 8,
+    text: "اجاره ویلا در نوشهر",
+  },
+  {
+    id: 9,
+    text: "اجاره ویلا در رامسر",
+  },
+  {
+    id: 10,
+    text: "اجاره ویلا در شیراز",
+  },
+  {
+    id: 11,
+    text: "اجاره ویلا در بندرعباس",
+  },
+  {
+    id: 12,
+    text: "اجاره ویلا در هرمزگان",
+  },
+  {
+    id: 13,
+    text: "اجاره ویلا در قشم",
+  },
+  {
+    id: 14,
+    text: "اجاره ویلا در کیش",
+  },
+  {
+    id: 15,
+    text: "اجاره ویلا در جزیره هرمز",
+  },
+  {
+    id: 16,
+    text: "اجاره ویلا در یزد",
+  },
+  {
+    id: 17,
+    text: "اجاره ویلا در همدان",
+  },
+  {
+    id: 18,
+    text: "اجاره ویلا در تهران",
+  },
+  {
+    id: 19,
+    text: "اجاره ویلا در بومهن",
+  },
+  {
+    id: 20,
+    text: "اجاره ویلا در دماوند",
+  },
+  {
+    id: 21,
+    text: "اجاره ویلا در لواسان",
+  },
+  {
+    id: 22,
+    text: "اجاره ویلا در طالقان",
+  },
+  {
+    id: 23,
+    text: "اجاره ویلا در کردان",
+  },
+  {
+    id: 24,
+    text: "اجاره ویلا در فیروزکوه",
+  },
+];
+let EjarevilaShomal = Ejare.filter((item) => {
+  return item.id <= 9;
+});
+EjarevilaShomal.forEach((item) => {
+  let divasli = document.getElementById("EjarevilaShomal");
+  let a = document.createElement("a");
+  a.className = "tagA";
+  a.href = "#";
+  a.innerText = item.text;
+  divasli.appendChild(a);
+});
+///////////
+let EjarevilaJonob = Ejare.filter((item) => {
+  return item.id > 9 && item.id <= 17;
+});
+EjarevilaJonob.forEach((item) => {
+  let divasli = document.getElementById("EjarevilaJonob");
+  let a = document.createElement("a");
+  a.className = "tagA";
+  a.href = "#";
+  a.innerText = item.text;
+  divasli.appendChild(a);
+});
+let EjarevilaTehran = Ejare.filter((item) => {
+  return item.id > 17 && item.id <= Ejare.length;
+});
+EjarevilaTehran.forEach((item) => {
+  let divasli = document.getElementById("EjarevilaTehran");
+  let a = document.createElement("a");
+  a.className = "tagA";
+  a.href = "#";
+  a.innerText = item.text;
+  divasli.appendChild(a);
+});
+let DIVsamtChap = Ejare.filter((item) => {
+  return item.id <= 17;
+});
+DIVsamtChap.forEach((itemha) => {
+  let divasli = document.getElementById("samtChap");
+  let a = document.createElement("a");
+  a.href = "#";
+
+  a.innerText = itemha.text;
+  divasli.appendChild(a);
+});
+////////////// data for EJARE
