@@ -8,57 +8,126 @@ var splide = new Splide(".splide", {
 
 splide.mount();
 var swiper = new Swiper(".porbazdid", {
-  slidesPerView: 6,
+  slidesPerView: 2,
   spaceBetween: 15,
   freeMode: true,
   navigation: {
     nextEl: ".swiper-button-next",
     prevEl: ".swiper-button-prev",
   },
+  breakpoints: {
+    550: {
+      slidesPerView: 3,
+    },
+    767: {
+      slidesPerView: 4,
+    },
+    991: {
+      slidesPerView: 5,
+    },
+    1287: {
+      slidesPerView: 6,
+    },
+  },
 });
 var swiper = new Swiper(".tehran", {
-  slidesPerView: 4,
+  slidesPerView: 1,
   spaceBetween: 15,
   freeMode: true,
   navigation: {
     nextEl: ".swiper-button-next2",
     prevEl: ".swiper-button-prev2",
   },
+  breakpoints: {
+    550: {
+      slidesPerView: 2,
+    },
+    991: {
+      slidesPerView: 3,
+    },
+    1287: {
+      slidesPerView: 4,
+    },
+  },
 });
 var swiper = new Swiper(".jonob", {
-  slidesPerView: 4,
+  slidesPerView: 1,
   spaceBetween: 15,
   freeMode: true,
   navigation: {
     nextEl: ".swiper-button-next3",
     prevEl: ".swiper-button-prev3",
   },
+  breakpoints: {
+    550: {
+      slidesPerView: 2,
+    },
+    991: {
+      slidesPerView: 3,
+    },
+    1287: {
+      slidesPerView: 4,
+    },
+  },
 });
 var swiper = new Swiper(".vilaTehran", {
-  slidesPerView: 4,
+  slidesPerView: 1,
   spaceBetween: 15,
   freeMode: true,
   navigation: {
     nextEl: ".swiper-button-next4",
     prevEl: ".swiper-button-prev4",
   },
+  breakpoints: {
+    550: {
+      slidesPerView: 2,
+    },
+    991: {
+      slidesPerView: 3,
+    },
+    1287: {
+      slidesPerView: 4,
+    },
+  },
 });
 var swiper = new Swiper(".vilaShomal", {
-  slidesPerView: 4,
+  slidesPerView: 1,
   spaceBetween: 15,
   freeMode: true,
   navigation: {
     nextEl: ".swiper-button-next5",
     prevEl: ".swiper-button-prev5",
   },
+  breakpoints: {
+    550: {
+      slidesPerView: 2,
+    },
+    991: {
+      slidesPerView: 3,
+    },
+    1287: {
+      slidesPerView: 4,
+    },
+  },
 });
 var swiper = new Swiper(".majale", {
-  slidesPerView: 5,
+  slidesPerView: 1,
   spaceBetween: 15,
   freeMode: true,
   navigation: {
     nextEl: ".swiper-button-next6",
     prevEl: ".swiper-button-prev6",
+  },
+  breakpoints: {
+    382: {
+      slidesPerView: 2,
+    },
+    767: {
+      slidesPerView: 3.5,
+    },
+    991: {
+      slidesPerView: 5,
+    },
   },
 });
 ///////swiper
@@ -81,6 +150,7 @@ body.addEventListener("click", function (event) {
     return null;
   } else if (
     event.target.id === "input-nameshahr" ||
+    event.target.className === "aha" ||
     event.target.id === "teadad-nafarat" ||
     event.target.className === "tarikh-safar cursor" ||
     event.target.tagName === "SPAN" ||
@@ -142,8 +212,21 @@ window.addEventListener("scroll", () => {
     jostejo.classList.add("hidden");
     header.classList.remove("header-scroll");
   }
+  let inputhayHeader = document.getElementById("inputhay-header");
+  if (window.pageYOffset >= 300) {
+    inputhayHeader.className = "inputhayheaderJs";
+    ////
+    inputnameShahr.style.border = "1px solid var(--boderSwiper2)";
+  } else {
+    inputhayHeader.className = "inputhay-header";
+    inputnameShahr.style.border = "none";
+  }
 });
-//
+
+////////////////////////////
+//////////////////////////
+
+////////////////////////
 let inputnameShahrchecked2 = document.querySelector(".name-shahr-checked2");
 
 let jostejoinput = document.getElementById("jostejo-input");
@@ -264,6 +347,7 @@ for (let i = 1; i < 32; i++) {
 let esmshahr = document.querySelectorAll(".esm-shahrhaAsli");
 esmshahr.forEach((div) => {
   div.addEventListener("click", (event) => {
+    header.style.zIndex = "999";
     let inputnameshahrINPUT = document.getElementById("input-nameshahr");
     inputnameshahrINPUT.value = event.target.innerText;
     inputnameShahrchecked.classList.add("hidden");
@@ -273,6 +357,21 @@ esmshahr.forEach((div) => {
 });
 /////////////////esm shahr
 ///////data for swiper
+
+//////
+let closeItem = document.getElementById("close");
+if (window.innerWidth <= 829) {
+  inputnameShahr.addEventListener("click", () => {
+    inputnameShahrchecked.className = "aha";
+    header.style.zIndex = "0";
+    inputnameShahr.style.border = "none";
+  });
+}
+closeItem.addEventListener("click", () => {
+  inputnameShahrchecked.classList.add("hidden");
+  header.style.zIndex = "999";
+  body.style.overflow = "auto";
+});
 let dataSwiper = [
   {
     id: 1,

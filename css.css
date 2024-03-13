@@ -79,11 +79,11 @@ body {
   position: relative;
   height: 620px;
   width: 100%;
-  z-index: 998;
+  z-index: 997;
   top: 0;
 }
 .background {
-  height: 620px;
+  height: inherit;
   width: 100%;
   position: absolute;
   top: 0;
@@ -129,7 +129,7 @@ header {
   top: 0px;
   left: 0;
   margin-bottom: -78px;
-  z-index: 999 !important;
+  z-index: 998;
   position: sticky;
   align-items: center;
   justify-content: center;
@@ -224,7 +224,8 @@ header {
   justify-content: center;
   flex-direction: column;
   color: var(--white);
-  height: calc(100% - 78px);
+  height: 100%;
+
   gap: 10px;
 }
 .title {
@@ -239,6 +240,88 @@ header {
   font-size: 14px;
   font-weight: 100;
 }
+/* inputhayheader */
+
+/* inputhayheader js */
+.close {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  gap: 10px;
+  padding-bottom: 20px;
+  margin-bottom: 15px;
+  cursor: pointer;
+  border-bottom: 1px var(--lightgray) solid;
+}
+.close > div > i {
+  color: var(--abibtn);
+  font-size: 25px;
+}
+.close > p {
+  color: var(--black);
+}
+
+/*  */
+.inputhayheaderJs {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  height: 75px;
+  left: 0;
+  transform: none;
+  z-index: 999 !important;
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 4px 25px;
+  padding: 10px;
+  background-color: var(--white);
+}
+.inputhayheaderJs > .name-shahr-checked {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  height: 100vh;
+  left: 0;
+  transform: none;
+  z-index: 999 !important;
+}
+
+.inputhayheaderJs > .name-shahr {
+  width: 100%;
+  height: 56px;
+  z-index: 999 !important;
+  border-radius: 100vmax;
+  margin-left: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.inputhayheaderJs > .name-shahr > i {
+  margin-right: 20px;
+  pointer-events: none;
+}
+.inputhayheaderJs > .name-shahr > input {
+  padding: 0 20px;
+  outline: none;
+  border: none;
+  width: 100%;
+  height: 56px;
+  background: none;
+  font-size: 16px;
+  font-family: iransans;
+}
+.inputhayheaderJs > .tarikh-safar {
+  display: none;
+}
+
+.inputhayheaderJs > .teadad-nafarat {
+  display: none;
+}
+.inputhayheaderJs > .button-jostejo {
+  display: none;
+}
+/*  */
+.close {
+  display: none;
+}
 .inputhay-header {
   width: 100%;
   max-width: 969px;
@@ -251,8 +334,9 @@ header {
   align-items: center;
 }
 .inputhay-header > .name-shahr {
-  width: 360px;
+  width: 100%;
   height: 56px;
+  max-width: 360px;
   z-index: 999 !important;
   border-radius: 100vmax;
   margin-left: 5px;
@@ -434,6 +518,94 @@ header {
 .esm-shahrhaAsli {
   cursor: pointer;
 }
+.aha {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  height: 100vh;
+  left: 0;
+  padding: 30px;
+  transform: none;
+  z-index: 999 !important;
+  background-color: var(--white);
+}
+.aha > h3 {
+  width: 100%;
+  font-size: 16px;
+  text-align: right;
+  font-weight: 100;
+  color: var(--black);
+}
+.aha > .esm-shahrha,
+.aha > .esm-shahrhaAsli {
+  display: flex;
+  align-items: center;
+  padding: 15px 0;
+  transition: 0.2s all linear;
+  gap: 15px;
+  border-bottom: 1px solid rgba(211, 211, 211, 0.897);
+}
+.aha > .esm-shahrha > div,
+.aha > .esm-shahrhaAsli > div {
+  padding: 6px 12px;
+  background-color: #f4f5ff;
+  border-radius: 8px;
+}
+.aha > .esm-shahrha > div > i,
+.aha > .esm-shahrhaAsli > div > i {
+  color: var(--abisite);
+}
+.aha > .esm-shahrha > h5,
+.aha > .esm-shahrhaAsli > h5 {
+  color: rgb(8, 10, 26);
+  font-size: 14px;
+  font-weight: 100;
+}
+.aha > .esm-shahrha:hover,
+.aha > .esm-shahrhaAsli:hover {
+  border-bottom: 1px solid var(--abibtn);
+}
+/*  */
+.name-shahr-checked2 {
+  width: 425px;
+  position: absolute;
+  background-color: var(--white);
+  padding: 20px 16px;
+  border-radius: 24px;
+  transform: translate(-190px, 240px);
+}
+.name-shahr-checked2 > h3 {
+  width: 100%;
+  font-size: 16px;
+  text-align: right;
+  font-weight: 100;
+  color: var(--black);
+}
+.name-shahr-checked2 > .esm-shahrha {
+  display: flex;
+  align-items: center;
+  padding: 15px 0;
+  transition: 0.2s all linear;
+  gap: 15px;
+  border-bottom: 1px solid rgba(211, 211, 211, 0.897);
+}
+.name-shahr-checked2 > .esm-shahrha > div {
+  padding: 6px 12px;
+  background-color: #f4f5ff;
+  border-radius: 8px;
+}
+.name-shahr-checked2 > .esm-shahrha > div > i {
+  color: var(--abisite);
+}
+.name-shahr-checked2 > .esm-shahrha > h5 {
+  color: rgb(8, 10, 26);
+  font-size: 14px;
+  font-weight: 100;
+}
+.name-shahr-checked2 > .esm-shahrha:hover {
+  border-bottom: 1px solid var(--abibtn);
+}
+/*  */
 .name-shahr-checked {
   width: 425px;
   position: absolute;
@@ -586,7 +758,7 @@ header {
   pointer-events: none;
   position: absolute;
   top: 0;
-  left: 0;
+  left: -10px;
 
   width: 195px;
   z-index: 2;
@@ -596,8 +768,9 @@ header {
 }
 .porbazdid-slider {
   cursor: pointer;
-  width: 165px !important;
-  height: 195px !important;
+  max-width: 165px;
+  min-width: 80px;
+  height: 190px !important;
   background-color: var(--lightgray);
   border-radius: 15px;
   font-size: 15px;
@@ -622,7 +795,7 @@ header {
   opacity: 0.5;
   z-index: -1;
   background-color: black;
-  width: 165px;
+  width: 100%;
   background: linear-gradient(transparent, black);
   height: 30px;
 }
@@ -646,7 +819,7 @@ header {
   opacity: 0.5;
   z-index: -1;
   background-color: black;
-  width: 165px;
+  width: 100%;
   background: linear-gradient(transparent, black);
   height: 30px;
 }
@@ -671,7 +844,7 @@ header {
   opacity: 0.5;
   z-index: -1;
   background-color: black;
-  width: 165px;
+  width: 100%;
   background: linear-gradient(transparent, black);
   height: 30px;
 }
@@ -695,7 +868,7 @@ header {
   opacity: 0.5;
   z-index: -1;
   background-color: black;
-  width: 165px;
+  width: 100%;
   background: linear-gradient(transparent, black);
   height: 30px;
 }
@@ -722,7 +895,7 @@ header {
   opacity: 0.5;
   z-index: -1;
   background-color: black;
-  width: 165px;
+  width: 100%;
   background: linear-gradient(transparent, black);
   height: 30px;
 }
@@ -746,7 +919,7 @@ header {
   opacity: 0.5;
   z-index: -1;
   background-color: black;
-  width: 165px;
+  width: 100%;
   background: linear-gradient(transparent, black);
   height: 30px;
 }
@@ -770,7 +943,7 @@ header {
   opacity: 0.5;
   z-index: -1;
   background-color: black;
-  width: 165px;
+  width: 100%;
   background: linear-gradient(transparent, black);
   height: 30px;
 }
@@ -794,7 +967,7 @@ header {
   opacity: 0.5;
   z-index: -1;
   background-color: black;
-  width: 165px;
+  width: 100%;
   background: linear-gradient(transparent, black);
   height: 30px;
 }
@@ -818,7 +991,7 @@ header {
   opacity: 0.5;
   z-index: -1;
   background-color: black;
-  width: 165px;
+  width: 100%;
   background: linear-gradient(transparent, black);
   height: 30px;
 }
@@ -842,7 +1015,7 @@ header {
   opacity: 0.5;
   z-index: -1;
   background-color: black;
-  width: 165px;
+  width: 100%;
   background: linear-gradient(transparent, black);
   height: 30px;
 }
@@ -1379,3 +1552,222 @@ footer {
   padding: 10px 0;
 }
 /* footer */
+/* respansive */
+@media (max-width: 1287px) {
+  .sad-darsad > div {
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 15px;
+    max-width: 960px;
+  }
+  .footer-margin-auto {
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 15px;
+    max-width: 960px;
+  }
+  .ejareha > .samtChap {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+@media (max-width: 990px) {
+  .sad-darsad > div {
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 15px;
+    max-width: 720px;
+  }
+  .footer-margin-auto {
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 15px;
+    max-width: 720px;
+  }
+  .inputhay-header {
+    width: 100%;
+    max-width: 843px;
+  }
+  .hashtagh-ha {
+    display: none;
+  }
+  .relative {
+    height: 408px;
+  }
+  .paeinheader {
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    flex-direction: column;
+    padding-bottom: 10px;
+  }
+  .inputhay-header > .name-shahr {
+    max-width: 430px;
+  }
+  .inputhay-header > .tarikh-safar {
+    width: 130px;
+  }
+  .inputhay-header > .tarikh-safar > span {
+    font-size: 12px;
+  }
+  .inputhay-header > .button-jostejo {
+    width: 100px;
+  }
+  .tanzim-tarikh {
+    transform: translate(-10px, 260px);
+  }
+  .sabtnam > a {
+    display: none;
+  }
+  .jostejo {
+    justify-content: start;
+  }
+  .jostejo > input {
+    max-width: 238px;
+  }
+  .flex {
+    gap: 20px;
+  }
+  .suggest {
+    justify-content: space-evenly;
+  }
+  .suggest > article:nth-of-type(4) {
+    display: none;
+  }
+  .sliderANDamar {
+    flex-direction: column;
+    align-items: center;
+  }
+  .eghmatgah-bartar-slider {
+    width: 100%;
+  }
+  .amarha {
+    display: flex;
+    gap: 10px;
+    flex-direction: column;
+    border: none;
+  }
+  .itemha {
+    padding: 15px 20px;
+    border-radius: 18px;
+    border: 1px solid var(--boderSwiper2);
+  }
+  .seta-itemha {
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+  }
+  .div-ashnaei-etemad {
+    width: 100%;
+  }
+  .etemad {
+    width: 100%;
+    align-items: center;
+    margin-top: 40px;
+  }
+  .Ashnaei {
+    width: inherit;
+  }
+  .div-dovom-footer {
+    width: 100%;
+    margin: 40px 0;
+    align-items: center;
+  }
+  .div-dovom-footer > .btn-1 {
+    width: 100%;
+  }
+  .div-sevom-footer {
+    width: 100%;
+    text-align: center;
+  }
+  .div-sevom-footer > div {
+    place-items: center;
+    gap: 20px;
+  }
+  .ejareha {
+    flex-direction: column;
+    gap: 30px;
+    box-shadow: 0 -1px 0px 0 rgba(65, 86, 217, 0.16);
+  }
+
+  a.tagA {
+    font-size: 13px;
+  }
+  .name-shahr-checked2 {
+    transform: translate(-140px, 240px);
+  }
+}
+
+@media (max-width: 830px) {
+  .close {
+    display: flex;
+  }
+  header {
+    position: relative;
+  }
+  .inputhay-header {
+    margin: 20px;
+    width: calc(100% - 30px);
+    max-width: 430px;
+    height: 60px;
+  }
+  .khat-space {
+    display: none;
+  }
+  .inputhay-header > .name-shahr {
+    width: 100%;
+  }
+  .inputhay-header > .tarikh-safar {
+    display: none;
+  }
+  .inputhay-header > .teadad-nafarat {
+    display: none;
+  }
+  .inputhay-header > .button-jostejo {
+    display: none;
+  }
+  .flex {
+    max-width: 112px;
+  }
+}
+@media (max-width: 767px) {
+  .sad-darsad > div {
+    padding: 0;
+    max-width: 540px;
+  }
+}
+@media (max-width: 576px) {
+  .eghmatgah-bartar-slider {
+    padding: 0;
+  }
+  li > p {
+    font-size: 11px !important;
+  }
+  .ejareha > .samtChap {
+    display: none;
+  }
+  .hoghogh-site-text {
+    font-size: 12px;
+    text-align: center;
+  }
+  .suggest > article > h3 {
+    font-size: 11px;
+    text-align: center;
+  }
+  ::before {
+    display: none;
+  }
+  i::before {
+    display: block;
+  }
+  .title-swiper {
+    justify-content: space-evenly;
+  }
+  .title-swiper > a {
+    font-size: 11px;
+    gap: 5px;
+  }
+  .title-swiper > h1 {
+    font-size: 13px;
+  }
+}
+/* respansive */
