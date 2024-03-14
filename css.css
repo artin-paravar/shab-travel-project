@@ -1105,6 +1105,8 @@ header {
   border-radius: 8px;
   flex-direction: column;
   padding: 3px;
+  text-decoration: none;
+  color: var(--black);
 }
 .tehran-slider > img {
   width: 100%;

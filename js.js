@@ -694,7 +694,8 @@ let tehranEghamtgah = dataSwiper.filter((a) => {
 tehranEghamtgah.forEach((item) => {
   let tehran = document.getElementById("tehran");
   //divasli
-  let divasli = document.createElement("div");
+  let divasli = document.createElement("a");
+  divasli.href = "houses/houses.html";
   divasli.className = "swiper-slide tehran-slider cursor";
   //divasli
 
@@ -773,8 +774,11 @@ let jonobEghamtgah = dataSwiper.filter((a) => {
 jonobEghamtgah.forEach((item) => {
   let jonob = document.getElementById("jonob");
   //divasli
-  let divasli = document.createElement("div");
+
+  let divasli = document.createElement("a");
   divasli.className = "swiper-slide tehran-slider cursor";
+  divasli.href = "houses/houses.html";
+
   //divasli
 
   //img
@@ -852,8 +856,9 @@ let vilaTehran = dataSwiper.filter((a) => {
 vilaTehran.forEach((item) => {
   let vilaTehran = document.getElementById("vilaTehran");
   //divasli
-  let divasli = document.createElement("div");
+  let divasli = document.createElement("a");
   divasli.className = "swiper-slide tehran-slider cursor";
+  divasli.href = "houses/houses.html";
   //divasli
 
   //img
@@ -931,8 +936,9 @@ let vilaShomal = dataSwiper.filter((a) => {
 vilaShomal.forEach((item) => {
   let vilaShomal = document.getElementById("vilaShomal");
   //divasli
-  let divasli = document.createElement("div");
+  let divasli = document.createElement("a");
   divasli.className = "swiper-slide tehran-slider cursor";
+  divasli.href = "houses/houses.html";
   //divasli
 
   //img
