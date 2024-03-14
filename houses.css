@@ -20,8 +20,8 @@ html {
 }
 @font-face {
   font-family: iransans;
-  src: url("/fonts/IRANSansXFaNum-Medium.woff") format("woff");
-  src: url("/fonts/IRANSansXFaNum-Medium.woff2") format("woff2");
+  src: url("fonts/IRANSansXFaNum-Medium.woff") format("woff");
+  src: url("fonts/IRANSansXFaNum-Medium.woff2") format("woff2");
 }
 hr {
   margin: 0;

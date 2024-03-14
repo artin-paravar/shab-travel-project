@@ -695,7 +695,7 @@ tehranEghamtgah.forEach((item) => {
   let tehran = document.getElementById("tehran");
   //divasli
   let divasli = document.createElement("a");
-  divasli.href = "houses/houses.html";
+  divasli.href = "houses.html";
   divasli.className = "swiper-slide tehran-slider cursor";
   //divasli
 
@@ -777,7 +777,7 @@ jonobEghamtgah.forEach((item) => {
 
   let divasli = document.createElement("a");
   divasli.className = "swiper-slide tehran-slider cursor";
-  divasli.href = "houses/houses.html";
+  divasli.href = "houses.html";
 
   //divasli
 
@@ -858,7 +858,7 @@ vilaTehran.forEach((item) => {
   //divasli
   let divasli = document.createElement("a");
   divasli.className = "swiper-slide tehran-slider cursor";
-  divasli.href = "houses/houses.html";
+  divasli.href = "houses.html";
   //divasli
 
   //img
@@ -938,7 +938,7 @@ vilaShomal.forEach((item) => {
   //divasli
   let divasli = document.createElement("a");
   divasli.className = "swiper-slide tehran-slider cursor";
-  divasli.href = "houses/houses.html";
+  divasli.href = "houses.html";
   //divasli
 
   //img
