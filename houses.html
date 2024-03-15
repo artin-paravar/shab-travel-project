@@ -4,7 +4,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" href="img/shab.logo.svg" />
-    <title>رویال سوییت پونک – آپارتمان در تهران | شب</title>
+    <title>رویال سوییت</title>
+    <link rel="stylesheet" href="swiper/swiper-bundle.min.css" />
     <link rel="stylesheet" href="houses.css" />
   </head>
   <body>
@@ -13,7 +14,7 @@
       <div class="padding-margin">
         <div class="header">
           <div class="flex">
-            <img src="/img/shab.logo.svg" class="logo" alt="logo" />
+            <img src="img/shab.logo.svg" class="logo" alt="logo" />
             <div class="jostejo">
               <input
                 type="text"
@@ -62,12 +63,46 @@
     <!-- end headar -->
     <!-- start img house -->
     <div class="img-houses" id="tasavir">
-      <img src="img/img-houses/house1.webp" alt="" />
-      <img src="img/img-houses/house2.webp" alt="" />
-      <img src="img/img-houses/house3.webp" alt="" />
-      <img src="img/img-houses/house4.webp" alt="" />
-      <img src="img/img-houses/house5.png" alt="" />
-      <!-- <img src="/img/img-houses/house6.jpg" alt="" /> -->
+      <img src="img/img-houses/house1.webp" id="img-slider" alt="" />
+      <img src="img/img-houses/house2.webp" id="img-slider" alt="" />
+      <img src="img/img-houses/house3.webp" id="img-slider" alt="" />
+      <img src="img/img-houses/house4.webp" id="img-slider" alt="" />
+      <div  class="before">
+      <img src="img/img-houses/house5.png" id="img-slider" alt="" />
+      </div>
+    </div>
+    <div class="slider" id="slider">
+      <div class="slider-margin-auto">
+      <div class="close">
+        <div>
+          <span id="close"><i class="fa-solid fa-xmark"></i></span>
+          <p>رویال سوییت</p>
+        </div>
+        <div>
+          <i class="fa-regular fa-bookmark"></i>
+          <i class="fa-solid fa-share-nodes"></i>
+        </div>
+      </div>
+      <div class="swiper">
+        <div class="swiper-wrapper"  id="img-houses-slider">
+        <div class="tanzim-slider swiper-slide" ><img src="img/img-houses/house1.webp" alt=""></div>
+        <div class="tanzim-slider swiper-slide"><img src="img/img-houses/house2.webp" alt=""></div>
+        <div class="tanzim-slider swiper-slide"><img src="img/img-houses/house3.webp" alt=""></div>
+        <div class="tanzim-slider swiper-slide"><img src="img/img-houses/house4.webp" alt=""></div>
+        <div class="tanzim-slider swiper-slide"><img src="img/img-houses/house5.png" alt=""></div>
+        </div>
+        <div class="swiper-button-next7"></div>
+        <div class="swiper-button-prev7"></div>
+      </div>
+
+      <div class="imgha-js" id="imgha-js">
+      <img src="img/img-houses/house1.webp" id="imgha-click" alt="" />
+      <img src="img/img-houses/house2.webp" id="imgha-click" alt="" />
+      <img src="img/img-houses/house3.webp" id="imgha-click" alt="" />
+      <img src="img/img-houses/house4.webp" id="imgha-click" alt="" />
+      <img src="img/img-houses/house5.png"  id="imgha-click" alt="" />
+      </div>
+    </div>
     </div>
     <!-- end img house -->
     <!-- start bakhsh bandi -->
@@ -78,9 +113,9 @@
             <a href="#tasavir" class="active">تصاویر</a>
             <a href="#moshakhasat">مشخصات</a>
             <a href="#ghavanin">قوانین</a>
-            <a id="nazarat" href="#">نظرات</a>
-            <a id="mogheyat" href="#">موقعیت</a>
-            <a id="taghvim" href="#">تقویم</a>
+            <a href="#nazarat" >نظرات</a>
+            <a href="#mogheyat">موقعیت</a>
+            <a href="#taghvim">تقویم</a>
           </div>
           <div class="alaghemandi-eshtrak">
             <div>
@@ -361,18 +396,261 @@
             </div>
           </div>
           <!--end ghavanin -->
+          <!--start nazarat -->
+          <div class="nazarat" id="nazarat">
+            <h3>امتیاز و نظرات کاربران</h3>
+            <div class="balay-commentha">
+              <div>
+                <i class="fa-solid fa-star"></i>
+                <span>امتیاز اقامتگاه</span>
+                <p>4.65 <span>از 5</span></p>
+              </div>
+              <div>
+                <i class="fa-solid fa-broom"></i>
+                <span>نظافت</span>
+                <p>4.16 <span>از 5</span></p>
+              </div>
+              <div>
+                <i class="fa-solid fa-square-check"></i>
+                <span>تطابق اطلاعات</span>
+                <p>4.88 <span>از 5</span></p>
+              </div>
+              <div>
+                <i class="fa-solid fa-money-bill"></i>
+                <span>ارزش قیمت</span>
+                <p>4.32 <span>از 5</span></p>
+              </div>
+              <div>
+                <i class="fa-solid fa-user"></i>
+                <span>نحوه میزبانی</span>
+                <p>4.76 <span>از 5</span></p>
+              </div>
+    
+              <div>
+                <i class="fa-regular fa-map"></i>
+                <span>مسیر و دسترسی</span>
+                <p>4.92 <span>از 5</span></p>
+              </div>
+            </div>
+            <div class="commentha" id="commentha">
+
+            </div>
+          </div>
+          <!--end nazarat -->
+          <div class="suggest">
+            <article>
+              <img src="img/suggest/insurance.svg" alt="" />
+              <h3>بیمه رایگان اقامت</h3>
+            </article>
+            <article>
+              <img src="img/suggest/discussion.svg" alt="" />
+              <h3>گفت‌وگو با میزبان پیش از پرداخت</h3>
+            </article>
+            <article>
+              <img src="img/suggest/clean-house.svg" alt="" />
+              <h3>تضمین نظافت اقامتگاه</h3>
+            </article>
+            <article>
+              <img src="img/suggest/customer-service.svg" alt="" />
+              <h3>پشتیبانی تا پایان سفر</h3>
+            </article>
+          </div>
+          <!--start mogheyat -->
+          <div class="mogheyat" id="mogheyat">
+            <h3>موقعیت مکانی</h3>
+            <p>این اقامتگاه در هرجا , هرجا وجود دارد</p>
+            <p>بافت محیط : داخل شهر</p>
+            <div class="map"></div>
+            <p style="font-size: 14px;">آدرس دقیق پس از پرداخت برای شما ارسال خواهد شد.</p>
+          </div>
+          <!--end mogheyat -->
+          <!--start taghvim -->
+          <div class="taghvim" id="taghvim">
+            <h3>تقویم و قیمت‌گذاری</h3>
+            <div class="hazingNAFAR">
+              <p>هزینه هر نفر اضافه به ازای هر شب:<strong> 200,000 تومان</strong></p>
+              <p>ایام پیک: <strong>200,000 تومان</strong></p>
+            </div>
+            <div class="khat-space"></div>
+            <h3>انتخاب تاریخ سفر</h3>
+            <p>حداقل مدت رزرو این اقامتگاه 1 شب است</p>
+
+            <div class=" tanzim-tarikh" id="tanzim-tarikh">
+              <div class="border">
+                <div class="mah-sal">
+                  <div class="target">
+                    <button disabled>
+                      <i class="fa-solid fa-arrow-right-long"></i>
+                    </button>
+                    <span>اسفند 1402 </span>
+                  </div>
+                  <div class="target">
+                    <span>فروردین 1403 </span>
+                    <button>
+                      <i class="fa-solid fa-arrow-left-long"></i>
+                    </button>
+                  </div>
+                </div>
+                <div class="hafte">
+                  -
+                  <div>
+                    <span>َش</span>
+                    <span>ی</span>
+                    <span>َد</span>
+                    <span>س</span>
+                    <span>چ</span>
+                    <span>پ</span>
+                    <span>ج</span>
+                  </div>
+                  <div>
+                    <span>َش</span>
+                    <span>ی</span>
+                    <span>َد</span>
+                    <span>س</span>
+                    <span>چ</span>
+                    <span>پ</span>
+                    <span>ج</span>
+                  </div>
+                </div>
+                <div class="days">
+                  <div id="daysha">
+                    <!-- blank -->
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                  </div>
+                  <div id="daysha2">
+                    <!-- blank -->
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+ 
+          <!--end taghvim -->
+
         </div>
         <div class="tamam-moshakhasat-geymat-sticy">
-          <div>sdf</div>
+          <div>
+            <div class="gheymat">
+              <p> قیمت هر شب از:</p>
+              <span>1,600,000 تومان</span>
+            </div>
+            <div class="vorod-khoroj">
+              <div>
+                <span>تاریخ ورود</span>
+                <hr>
+                <span>تاریخ خروج</span>
+              </div>
+              <div>
+                <button class="plus-mines" id="plus" >+</button>
+                <div id="tedad">0 نفر</div>
+                <button class="plus-mines" id="mines" >-</button>
+              </div>
+            </div>
+            <button class="entekhab-safar">انتخاب تاریخ سفر</button>
+            <span class="chat-online">امکان چت آنلاین بعد از ثبت رزرو رایگان</span>
+          </div>
         </div>
       </div>
     </div>
     <!-- end tamam moshakhasat -->
-
+    <!-- footer -->
+    <footer>
+      <div class="footer-margin-auto">
+        <div class="seta-itemha">
+          <div class="div-ashnaei-etemad">
+            <div class="Ashnaei">
+              <h5>با شب بیشتر آشنا شوید</h5>
+              <div class="data-ashnaeiha">
+                <ul id="data-ashnaei1"></ul>
+                <ul id="data-ashnaei2"></ul>
+                <ul id="data-ashnaei3"></ul>
+              </div>
+            </div>
+          </div>
+          <div class="div-dovom-footer">
+            <h5>تلفن پشتیبانی پاسخگویی ۹ صبح تا ۱ شب</h5>
+            <div>
+              <a href="tel:+98 21 28 11 12 88">۰۲۱ - ۲۸ ۱۱ ۱۲ ۸۸</a>
+              <span><i class="fa-solid fa-phone"></i></span>
+            </div>
+            <button class="btn-1">چت با پشتیبانی</button>
+          </div>
+          <div class="div-sevom-footer">
+            <h5>شبکه‌های اجتماعی شب</h5>
+            <div class="social-media">
+              <a href="#"><i class="fa-brands fa-telegram"></i></a>
+              <a href="#"><i class="fa-brands fa-twitter"></i></a>
+              <a href="#"><i class="fa-brands fa-instagram"></i></a>
+              <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+            </div>
+          </div>
+        </div>
+        <!--  -->
+        <div class="seta-itemha">
+          <div class="div-ashnaei-etemad">
+            <div class="etemad">
+              <h5>با خیال راحت به ما اعتماد کنید</h5>
+              <img src="img/enamadEtemad.png" alt="" />
+            </div>
+          </div>
+          <div class="div-dovom-footer">
+            <h5>از تخفیف‌ها و اخبار شب باخبر شوید</h5>
+            <input type="text" placeholder="آدرس ایمیل خود را وارد نمائید" />
+            <button class="btn-2">ثبت نام در خبرنامه</button>
+          </div>
+          <div class="div-sevom-footer">
+            <h5>دانلود اپلیکیشن</h5>
+            <div class="social-media">
+              <a href="#"
+                ><img src="img/aplication/bazar.28ed391f.png" alt=""
+              /></a>
+              <a href="#"
+                ><img src="img/aplication/gplay.562bf4cf.png" alt=""
+              /></a>
+              <a href="#"
+                ><img src="img/aplication/sib.e6731917.png" alt=""
+              /></a>
+              <a href="#"
+                ><img src="img/aplication/anardooni.de09c90f.png" alt=""
+              /></a>
+            </div>
+          </div>
+        </div>
+        <section class="ejareha sad-darsad">
+          <div class="samtRast" id="samtRast">
+            <div class="EjarevilaShomal" id="EjarevilaShomal">
+              <h6>ویلاهای شمال</h6>
+            </div>
+            <div class="EjarevilaJonob" id="EjarevilaJonob">
+              <h6>ویلاهای جنوب</h6>
+            </div>
+            <div class="EjarevilaTehran" id="EjarevilaTehran">
+              <h6>ویلاهای اطراف تهران</h6>
+            </div>
+          </div>
+          <div class="samtChap" id="samtChap"></div>
+        </section>
+      </div>
+      <section class="hoghogh-site">
+        <div class="footer-margin-auto">
+          <p class="hoghogh-site-text">
+            تمامی حقوق این وب‌سایت متعلق به شرکت وندا رایمند شریف است
+          </p>
+        </div>
+      </section>
+    </footer>
+    <!-- footer -->
     <script
       src="https://kit.fontawesome.com/9e4e574267.js"
       crossorigin="anonymous"
     ></script>
+    <script src="swiper/swiper-bundle.min.js"></script>
     <script src="houses.js"></script>
   </body>
 </html>

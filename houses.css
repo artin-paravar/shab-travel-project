@@ -23,6 +23,32 @@ html {
   src: url("fonts/IRANSansXFaNum-Medium.woff") format("woff");
   src: url("fonts/IRANSansXFaNum-Medium.woff2") format("woff2");
 }
+.swiper {
+  border-radius: 12px !important;
+  width: 80%;
+  height: 80%;
+}
+
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.khat-space {
+  width: 60px;
+  height: 1px;
+  background-color: rgba(0, 0, 0, 0.24);
+}
 hr {
   margin: 0;
   -webkit-flex-shrink: 0;
@@ -88,6 +114,7 @@ body {
   width: 100%;
   max-width: 1536px;
   padding: 0 24px;
+  z-index: 998 !important;
   margin: 0 auto;
 }
 header {
@@ -97,7 +124,8 @@ header {
   top: 0px;
   left: 0;
   margin-bottom: -78px;
-  z-index: 999;
+  z-index: 998 !important;
+
   position: sticky;
   align-items: center;
   justify-content: center;
@@ -106,6 +134,7 @@ header {
   background-color: var(--white);
 }
 .header {
+  z-index: 998 !important;
   width: 100%;
   max-width: 1488px;
   display: flex;
@@ -232,13 +261,14 @@ header {
 .img-houses {
   display: grid;
   width: 100%;
-  gap: 5px;
+  gap: 3px;
   margin-top: 78px;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: repeat(3, 1fr);
 }
 .img-houses > img {
   width: inherit;
+  cursor: pointer;
   height: inherit;
   cursor: pointer;
 }
@@ -251,30 +281,142 @@ header {
 }
 .img-houses > img:nth-child(2) {
   object-fit: cover;
-  max-height: 250px;
-
+  max-height: 252px;
   grid-row: 1/6;
   height: 100%;
 }
 .img-houses > img:nth-child(3) {
   object-fit: cover;
-  max-height: 250px;
+  max-height: 252px;
   grid-row: 6/12;
   height: 100%;
 }
 .img-houses > img:nth-child(4) {
   object-fit: cover;
-  max-height: 250px;
+  max-height: 252px;
   grid-row: 1/6;
 
   height: 100%;
 }
-.img-houses > img:nth-child(5) {
-  object-fit: cover;
-  max-height: 250px;
-  grid-row: 6/12;
+.before {
+  max-height: 252px;
+  pointer-events: none;
+  position: relative;
+}
 
+.before > img {
+  width: 100%;
+  object-fit: cover;
+  max-height: 252px;
+  pointer-events: all;
+  cursor: pointer;
+  grid-row: 6/12;
+  position: relative;
   height: 100%;
+}
+.before::before {
+  font-size: 14px;
+  color: var(--white);
+  pointer-events: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  content: "مشاهده تمام تصاویر";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  z-index: 1;
+  left: 0;
+  background-color: rgba(12, 12, 12, 0.507);
+}
+/*  */
+.slider {
+  transition: 0.2s all;
+  width: 100%;
+  height: 100vh;
+  transform: translateY(100%);
+  position: fixed;
+  background-color: var(--white);
+  z-index: 999;
+  top: 0;
+  left: 0;
+}
+.slider-margin-auto {
+  background-color: rgb(255, 255, 255);
+  max-width: 960px;
+  width: 100%;
+  gap: 40px;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  display: flex;
+
+  flex-direction: column;
+  padding: 32px 0px;
+  position: relative;
+  margin: 0px auto;
+}
+.slider-margin-auto > .close {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 20px;
+}
+.slider-margin-auto > .close > div:nth-child(1) {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+}
+.slider-margin-auto > .close > div:nth-child(1) > span {
+  cursor: pointer;
+  font-size: 28px;
+  padding: 10px 15px;
+  border: var(--lightgray) 1px solid;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.slider-margin-auto > .close > div:nth-child(1) > p {
+  font-size: 18px;
+}
+.slider-margin-auto > .close > div:nth-child(2) {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  justify-content: center;
+}
+.slider-margin-auto > .close > div:nth-child(2) > i {
+  font-size: 22px;
+  padding: 10px 15px;
+  border: var(--lightgray) 1px solid;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.swiper-wrapper {
+  border-radius: 12px;
+}
+.tanzim-slider {
+  width: 100% !important;
+  object-fit: cover !important;
+}
+.imgha-js {
+  width: 80%;
+  display: flex;
+  margin: 0 auto;
+  align-items: center;
+  justify-content: space-between;
+  height: 80px;
+}
+.imgha-js > img {
+  width: 80px;
+  height: 80px;
+  border-radius: 12px;
+  cursor: pointer;
 }
 /* img houses */
 /* kojay-safhe */
@@ -520,7 +662,7 @@ header {
 }
 .anten-dehi > h3 {
   font-size: 18px;
-  font-weight: 100;
+  font-weight: 600;
 }
 .anten-dehi > .irancel-hamrahAval {
   display: flex;
@@ -557,7 +699,7 @@ header {
 .emkanat > h3 {
   font-size: 18px;
   margin: 15px 0;
-  font-weight: 100;
+  font-weight: 600;
 }
 .item-emkanat {
   display: grid;
@@ -580,7 +722,7 @@ header {
 .otagh-services > h3 {
   font-size: 18px;
   margin: 5px 0 15px 0;
-  font-weight: 100;
+  font-weight: 600;
 }
 .otagh-services > .item {
   display: flex;
@@ -605,7 +747,8 @@ header {
   margin: 2px 0;
   color: var(--gray);
 }
-/*  */
+/* moshakhasat */
+/* ghavanin */
 .ghavanin {
   display: flex;
   flex-direction: column;
@@ -615,7 +758,7 @@ header {
 }
 .ghavanin > h3 {
   font-size: 18px;
-  font-weight: 100;
+  font-weight: 600;
 }
 .ghavanin > div {
   display: flex;
@@ -701,17 +844,815 @@ header {
 .ghavanin > div > .samtChap > .jabejayi-bigheyd > span {
   margin-right: 12px;
 }
-/* moshakhasat */
+/* ghavanin */
+
+/* nazarat */
+.nazarat {
+  display: flex;
+  flex-direction: column;
+  border-bottom: var(--lightgray) 1px solid;
+  padding: 30px 0;
+  gap: 10px;
+}
+.nazarat > h3 {
+  font-size: 18px;
+  font-weight: 600;
+}
+.balay-commentha {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 10px 0;
+}
+.balay-commentha > div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px;
+}
+.balay-commentha > div > i {
+  font-size: 20px;
+}
+.balay-commentha > div > span {
+  font-size: 12px;
+}
+.balay-commentha > div > p {
+  font-size: 14px;
+}
+.balay-commentha > div > p > span {
+  font-size: 12px;
+  color: var(--lightblack);
+}
+/*  */
+.commentha {
+  display: grid;
+  gap: 15px;
+  grid-template-columns: repeat(2, 1fr);
+}
+.comment {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  border: var(--lightgray) 1px solid;
+  padding: 10px;
+  border-radius: 12px;
+}
+.divNameANDpishnahadANDimg {
+  display: flex;
+  gap: 5px;
+}
+.divNameANDpishnahadANDimg > img {
+  object-fit: contain;
+}
+.divNameANDpishnahad {
+  height: 30px;
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+}
+.pishnahadTRUE {
+  background-color: #eafaee;
+  padding: 4px 8px;
+  height: 24px;
+  color: green;
+  border-radius: 12px;
+  font-size: 12px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+.pishnahadFALSE {
+  font-size: 12px;
+  border-radius: 12px;
+  height: 24px;
+  padding: 4px 8px;
+  background-color: #fce9eb;
+  color: red;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+.flex-decoration {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+.startANDzaman {
+  display: flex;
+  gap: 5px;
+  align-items: center;
+}
+.startANDzaman > div {
+  margin-top: 5px;
+}
+.TEXTcomment {
+  height: 90px;
+  font-size: 14px;
+  padding: 10px;
+}
+
+/* nazarat */
+/*start suggest */
+.suggest {
+  display: flex;
+  width: 100%;
+  border-bottom: var(--lightgray) 1px solid;
+  padding: 30px 0px;
+  align-items: center;
+  justify-content: space-between;
+}
+.suggest > article {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 10px;
+}
+.suggest > article > img {
+  width: 44px;
+  height: 44px;
+}
+.suggest > article > h3 {
+  font-size: 14px;
+}
+/* end suggest */
+
+/* mogheyat */
+.mogheyat {
+  display: flex;
+  flex-direction: column;
+  border-bottom: var(--lightgray) 1px solid;
+  padding: 30px 0;
+  gap: 15px;
+}
+.mogheyat > h3 {
+  font-weight: 600;
+  font-size: 18px;
+}
+.mogheyat > p {
+  color: var(--lightblack);
+}
+.map {
+  width: 100%;
+  height: 400px;
+  background: url(img/map.png);
+  background-size: cover;
+  border-radius: 12px;
+}
+/* mogheyat */
+/* taghvim */
+.taghvim {
+  display: flex;
+  flex-direction: column;
+  padding: 30px 0;
+  gap: 15px;
+}
+.taghvim > h3 {
+  font-weight: 600;
+  font-size: 18px;
+}
+.taghvim > p {
+  font-size: 14px;
+}
+.hazingNAFAR {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+.hazingNAFAR {
+  color: var(--lightblack);
+}
+.tanzim-tarikh {
+  width: 100%;
+  height: 430px;
+  background-color: var(--white);
+  border-radius: 15px;
+}
+.tanzim-tarikh > .border {
+  padding: 16px;
+  border: 1px solid var(--lightgray);
+  border-radius: 15px;
+  height: 100%;
+}
+.tanzim-tarikh > .border > .mah-sal {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  justify-content: space-between;
+}
+.tanzim-tarikh > .border > .mah-sal > div:nth-of-type(1) {
+  width: 351px;
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  color: black;
+  gap: 10px;
+}
+.tanzim-tarikh > .border > .mah-sal > div:nth-of-type(2) {
+  width: 351px;
+  color: black;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  justify-content: end;
+}
+.tanzim-tarikh > .border > .mah-sal > div > button {
+  width: 46px;
+  font-size: 16px;
+  height: 32px;
+  background: none;
+  border: 1px solid var(--lightgray);
+  border-radius: 6px;
+  cursor: pointer;
+}
+.hafte {
+  width: 100%;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: gray;
+  font-size: 11px;
+}
+.hafte > div {
+  display: flex;
+  width: 290px;
+  align-items: center;
+  justify-content: space-between;
+  margin: 10px 12px;
+}
+.days {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: black;
+}
+.days > div {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  width: 310px;
+  height: 100%;
+  align-items: center;
+  gap: 5px;
+}
+.daysadad {
+  padding: 12px 10px;
+  cursor: pointer;
+  border: 1px solid var(--lightgray);
+  border-radius: 8px;
+}
+/* taghvim */
 /* tamam-moshakhasat-geymat-sticy */
 .tamam-moshakhasat-geymat-sticy {
   flex: 4;
 }
 .tamam-moshakhasat-geymat-sticy > div {
   display: flex;
+  flex-direction: column;
   position: sticky;
-  padding: 50px 10px;
-  background-color: var(--boderSwiper2);
+  padding: 10px;
+  align-items: center;
+  border: var(--boderSwiper2) 1px solid;
+  border-radius: 8px;
+  gap: 10px;
   top: 145px;
+}
+.tamam-moshakhasat-geymat-sticy > div > .gheymat {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+.tamam-moshakhasat-geymat-sticy > div > .gheymat > p {
+  font-size: 14px;
+  color: var(--lightblack);
+}
+.tamam-moshakhasat-geymat-sticy > div > .vorod-khoroj {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  border-radius: 15px;
+  border: var(--boderSwiper2) 1px solid;
+  flex-direction: column;
+}
+.tamam-moshakhasat-geymat-sticy > div > .vorod-khoroj > div:nth-child(1) {
+  display: flex;
+  width: 100%;
+  align-items: center;
+}
+
+.tamam-moshakhasat-geymat-sticy
+  > div
+  > .vorod-khoroj
+  > div:nth-child(1)
+  > span {
+  flex: 6;
+  display: flex;
+  padding: 15px;
+  justify-content: center;
+  align-items: center;
+  color: var(--lightblack);
+  font-size: 15px;
+}
+.tamam-moshakhasat-geymat-sticy > div > .vorod-khoroj > div:nth-child(2) {
+  display: flex;
+  padding: 10px;
+  border-top: var(--boderSwiper2) 1px solid;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+}
+.tamam-moshakhasat-geymat-sticy
+  > div
+  > .vorod-khoroj
+  > div:nth-child(2)
+  > button {
+  display: flex;
+  border-radius: 50%;
+  font-size: 26px;
+  padding: 10px 15px;
+  color: var(--abisite);
+  justify-content: center;
+  width: 32px;
+  border: none;
+  height: 32px;
+  align-items: center;
+  background-color: #f0efff;
+}
+#tedad {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+  justify-content: center;
+  padding: 4px;
+  height: 32px;
+}
+.entekhab-safar {
+  border-radius: 80px;
+  border: none;
+  background-color: var(--abisite);
+  color: var(--white);
+  font-size: 18px;
+  width: 100%;
+  padding: 10px 0;
+  margin: 15px 0;
+}
+.chat-online {
+  font-size: 12px;
+  color: var(--lightblack);
+  margin-bottom: 10px;
 }
 /* tamam-moshakhasat-geymat-sticy */
 /* tamam-moshakhasat */
+/* footer */
+footer {
+  margin-top: 30px;
+  background-color: #fff;
+  box-shadow: 0 -1px 2px 0 rgba(65, 86, 217, 0.16);
+  padding-top: 40px;
+}
+.footer-margin-auto {
+  margin: 0 auto;
+  width: 100%;
+  max-width: 1228px;
+  padding: 0 15px;
+}
+/*  */
+.seta-itemha {
+  display: flex;
+  width: 100%;
+  margin: 10px 0;
+}
+.div-ashnaei-etemad {
+  display: flex;
+  flex: 2;
+  gap: 10px;
+}
+.data-ashnaeiha {
+  display: flex;
+  align-items: start;
+  justify-content: center;
+}
+.Ashnaei {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: center;
+  gap: 20px;
+}
+
+.data-ashnaeiha > ul {
+  list-style: none;
+  flex-direction: column;
+  display: flex;
+  font-size: 14px;
+  gap: 20px;
+  margin-left: 20px;
+  justify-content: center;
+  color: var(--placeholder);
+}
+.div-dovom-footer {
+  padding: 0px 30px;
+  flex: 2;
+  gap: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+}
+
+.div-dovom-footer > div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+.div-dovom-footer > input {
+  outline: none;
+  border: 1px solid #e6e7f2;
+  color: #080a1a;
+  height: 44px;
+  padding: 0 20px;
+  -webkit-appearance: none;
+  width: 100%;
+  max-width: 300px;
+  border-radius: 80px;
+  text-align: center;
+  padding: 0 15px;
+}
+.div-dovom-footer > input::placeholder {
+  font-size: 16px;
+  font-weight: 600;
+}
+.div-dovom-footer > div > a {
+  font-size: 32px;
+  text-decoration: none;
+  color: var(--black);
+}
+.div-dovom-footer > div > span {
+  border: 1px solid #eeeeee;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--abibtn);
+}
+.div-dovom-footer > .btn-1 {
+  width: 300px;
+  height: 40px;
+  border-radius: 80px;
+  border: none;
+  background-color: var(--abisite);
+  color: var(--white);
+  font-size: 16px;
+}
+.div-dovom-footer > .btn-2 {
+  width: 296px;
+  font-size: 16px;
+  height: 38px;
+  margin-top: 5px;
+  border: 1px solid var(--abisite);
+  color: var(--abisite);
+  background: none;
+  -webkit-transition: 300ms;
+  transition: 300ms;
+  border-radius: 100px;
+}
+.div-sevom-footer {
+  flex: 1;
+  display: flex;
+  gap: 10px;
+  flex-direction: column;
+}
+
+.div-sevom-footer > div {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: 44px;
+  gap: 10px;
+}
+.div-sevom-footer > div > a {
+  width: 112px;
+  height: 44px;
+  border-radius: 80px;
+  display: flex;
+  text-decoration: none;
+  align-items: center;
+  justify-content: center;
+  color: #4156d9;
+  border: 1px solid #eeeeee;
+  font-size: 23px;
+}
+/*  */
+.etemad {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  gap: 10px;
+  justify-content: start;
+}
+.etemad > img {
+  height: 105px;
+  width: 105px;
+}
+.Ashnaei > h5,
+.div-sevom-footer > h5,
+.etemad > h5,
+.div-dovom-footer > h5 {
+  font-size: 18px;
+  font-weight: 100;
+}
+
+/*  */
+
+.ejareha {
+  box-shadow: 0 -1px 2px 0 rgba(65, 86, 217, 0.16);
+
+  padding-top: 20px;
+  margin-bottom: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.ejareha > .samtRast {
+  display: flex;
+  gap: 20px;
+  width: 100%;
+  max-width: 500px;
+}
+.EjarevilaShomal,
+.EjarevilaJonob,
+.EjarevilaTehran {
+  display: flex;
+  gap: 15px;
+  flex-direction: column;
+}
+.EjarevilaShomal > h6,
+.EjarevilaJonob > h6,
+.EjarevilaTehran > h6 {
+  font-size: 18px;
+  font-weight: 100;
+}
+.EjarevilaShomal > a,
+.EjarevilaJonob > a,
+.EjarevilaTehran > a {
+  font-size: 14px;
+  text-decoration: none;
+  color: var(--lightblack);
+}
+
+.ejareha > .samtChap {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+.ejareha > .samtChap > a {
+  font-weight: 500;
+  padding: 5px 0;
+  text-decoration: none;
+  color: var(--lightblack);
+  font-size: 12px;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  border: 1px solid var(--boderSwiper2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 80px;
+  margin: 6px;
+}
+/*  */
+.hoghogh-site {
+  width: 100%;
+  margin-top: 20px;
+  box-shadow: 0 -1px 2px 0 rgba(65, 86, 217, 0.16);
+}
+.hoghogh-site-text {
+  font-size: 14px;
+  color: var(--lightblack);
+  padding: 10px 0;
+}
+/* footer */
+
+/* @media (max-width: 1287px) {
+  .sad-darsad > div {
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 15px;
+    max-width: 960px;
+  }
+  .footer-margin-auto {
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 15px;
+    max-width: 960px;
+  }
+  .ejareha > .samtChap {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+@media (max-width: 990px) {
+  .sad-darsad > div {
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 15px;
+    max-width: 720px;
+  }
+  .footer-margin-auto {
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 15px;
+    max-width: 720px;
+  }
+  .inputhay-header {
+    width: 100%;
+    max-width: 843px;
+  }
+  .hashtagh-ha {
+    display: none;
+  }
+  .relative {
+    height: 408px;
+  }
+  .paeinheader {
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    flex-direction: column;
+    padding-bottom: 10px;
+  }
+  .inputhay-header > .name-shahr {
+    max-width: 430px;
+  }
+  .inputhay-header > .tarikh-safar {
+    width: 130px;
+  }
+  .inputhay-header > .tarikh-safar > span {
+    font-size: 12px;
+  }
+  .inputhay-header > .button-jostejo {
+    width: 100px;
+  }
+  .tanzim-tarikh {
+    transform: translate(-10px, 260px);
+  }
+  .sabtnam > a {
+    display: none;
+  }
+  .jostejo {
+    justify-content: start;
+  }
+  .jostejo > input {
+    max-width: 238px;
+  }
+  .flex {
+    gap: 20px;
+  }
+  .suggest {
+    justify-content: space-evenly;
+  }
+  .suggest > article:nth-of-type(4) {
+    display: none;
+  }
+  .sliderANDamar {
+    flex-direction: column;
+    align-items: center;
+  }
+  .eghmatgah-bartar-slider {
+    width: 100%;
+  }
+  .amarha {
+    display: flex;
+    gap: 10px;
+    flex-direction: column;
+    border: none;
+  }
+  .itemha {
+    padding: 15px 20px;
+    border-radius: 18px;
+    border: 1px solid var(--boderSwiper2);
+  }
+  .seta-itemha {
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+  }
+  .div-ashnaei-etemad {
+    width: 100%;
+  }
+  .etemad {
+    width: 100%;
+    align-items: center;
+    margin-top: 40px;
+  }
+  .Ashnaei {
+    width: inherit;
+  }
+  .div-dovom-footer {
+    width: 100%;
+    margin: 40px 0;
+    align-items: center;
+  }
+  .div-dovom-footer > .btn-1 {
+    width: 100%;
+  }
+  .div-sevom-footer {
+    width: 100%;
+    text-align: center;
+  }
+  .div-sevom-footer > div {
+    place-items: center;
+    gap: 20px;
+  }
+  .ejareha {
+    flex-direction: column;
+    gap: 30px;
+    box-shadow: 0 -1px 0px 0 rgba(65, 86, 217, 0.16);
+  }
+
+  a.tagA {
+    font-size: 13px;
+  }
+  .name-shahr-checked2 {
+    transform: translate(-140px, 240px);
+  }
+}
+
+@media (max-width: 830px) {
+  .close {
+    display: flex;
+  }
+  header {
+    position: relative;
+  }
+  .inputhay-header {
+    margin: 20px;
+    width: calc(100% - 30px);
+    max-width: 430px;
+    height: 60px;
+  }
+  .khat-space {
+    display: none;
+  }
+  .inputhay-header > .name-shahr {
+    width: 100%;
+  }
+  .inputhay-header > .tarikh-safar {
+    display: none;
+  }
+  .inputhay-header > .teadad-nafarat {
+    display: none;
+  }
+  .inputhay-header > .button-jostejo {
+    display: none;
+  }
+  .flex {
+    max-width: 112px;
+  }
+}
+@media (max-width: 767px) {
+  .sad-darsad > div {
+    padding: 0;
+    max-width: 540px;
+  }
+}
+@media (max-width: 576px) {
+  .eghmatgah-bartar-slider {
+    padding: 0;
+  }
+  li > p {
+    font-size: 11px !important;
+  }
+  .ejareha > .samtChap {
+    display: none;
+  }
+  .hoghogh-site-text {
+    font-size: 12px;
+    text-align: center;
+  }
+  .suggest > article > h3 {
+    font-size: 11px;
+    text-align: center;
+  }
+  ::before {
+    display: none;
+  }
+  i::before {
+    display: block;
+  }
+  .title-swiper {
+    justify-content: space-evenly;
+  }
+  .title-swiper > a {
+    font-size: 11px;
+    gap: 5px;
+  }
+  .title-swiper > h1 {
+    font-size: 13px;
+  }
+} */
+/* respansive */

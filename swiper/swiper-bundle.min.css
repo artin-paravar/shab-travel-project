@@ -1119,4 +1119,86 @@ button.swiper-pagination-bullet {
   line-height: 1;
   font-weight: 600;
 }
+/* 7 */
+.swiper-button-next7.swiper-button-disabled,
+.swiper-button-prev7.swiper-button-disabled {
+  opacity: 0;
+  cursor: auto;
+  pointer-events: none;
+}
+.swiper-button-next7.swiper-button-hidden,
+.swiper-button-prev7.swiper-button-hidden {
+  opacity: 0;
+  cursor: auto;
+  pointer-events: none;
+}
+.swiper-navigation-disabled .swiper-button-next7,
+.swiper-navigation-disabled .swiper-button-prev7 {
+  display: none !important;
+}
+.swiper-button-next7 svg,
+.swiper-button-prev7 svg {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  transform-origin: center;
+}
+.swiper-rtl .swiper-button-next7 svg,
+.swiper-rtl .swiper-button-prev7 svg {
+  transform: rotate(180deg);
+}
+.swiper-button-prev7,
+.swiper-rtl .swiper-button-next7 {
+  left: var(--swiper-navigation-sides-offset, 10px);
+  right: auto;
+}
+.swiper-button-next7,
+.swiper-rtl .swiper-button-prev7 {
+  right: var(--swiper-navigation-sides-offset, 10px);
+  left: auto;
+}
+.swiper-button-lock {
+  display: none;
+}
+
+.swiper-button-prev7:after,
+.swiper-rtl .swiper-button-next7:after {
+  content: "prev7";
+}
+.swiper-button-next7,
+.swiper-rtl .swiper-button-prev7 {
+  right: var(--swiper-navigation-sides-offset, 10px);
+  left: auto;
+}
+.swiper-button-next7:after,
+.swiper-rtl .swiper-button-prev7:after {
+  content: "next";
+}
+.swiper-button-next7,
+.swiper-button-prev7 {
+  position: absolute;
+  top: 50%;
+  width: 44px;
+  height: 44px;
+  margin-top: calc(0px - (var(--swiper-navigation-size) / 2));
+  z-index: 10;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: gray;
+  background-color: white;
+  border: 1px solid gray;
+  border-radius: 20%;
+}
+.swiper-button-next7:after,
+.swiper-button-prev7:after {
+  font-family: swiper-icons;
+  font-size: 15px;
+  text-transform: none !important;
+  letter-spacing: 0;
+  font-variant: initial;
+  line-height: 1;
+  font-weight: 600;
+}
 /* custom */
