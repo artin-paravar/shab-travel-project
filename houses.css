@@ -24,11 +24,13 @@ html {
   src: url("fonts/IRANSansXFaNum-Medium.woff2") format("woff2");
 }
 .swiper {
-  border-radius: 12px !important;
+  border-radius: 12px;
   width: 80%;
   height: 80%;
 }
-
+p {
+  text-align: justify;
+}
 .swiper-slide {
   text-align: center;
   font-size: 18px;
@@ -223,6 +225,7 @@ header {
   background-color: var(--white);
   padding: 20px 16px;
   border-radius: 24px;
+  z-index: 999;
   transform: translate(-190px, 240px);
 }
 .name-shahr-checked2 > h3 {
@@ -264,7 +267,7 @@ header {
   gap: 3px;
   margin-top: 78px;
   grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: repeat(3, 1fr);
+  grid-template-rows: repeat(5, 130px);
 }
 .img-houses > img {
   width: inherit;
@@ -274,32 +277,28 @@ header {
 }
 .img-houses > img:nth-child(1) {
   object-fit: cover;
-  grid-row: 1/12;
+  grid-row: 1/6;
   height: 100%;
-  max-height: 510px;
   width: 100%;
 }
 .img-houses > img:nth-child(2) {
   object-fit: cover;
-  max-height: 252px;
-  grid-row: 1/6;
+  grid-row: 1/3;
   height: 100%;
 }
 .img-houses > img:nth-child(3) {
   object-fit: cover;
-  max-height: 252px;
-  grid-row: 6/12;
+  grid-row: 3/6;
   height: 100%;
 }
 .img-houses > img:nth-child(4) {
   object-fit: cover;
-  max-height: 252px;
-  grid-row: 1/6;
-
+  grid-row: 1/3;
   height: 100%;
 }
+
 .before {
-  max-height: 252px;
+  grid-row: 3/6;
   pointer-events: none;
   position: relative;
 }
@@ -307,10 +306,10 @@ header {
 .before > img {
   width: 100%;
   object-fit: cover;
-  max-height: 252px;
+
   pointer-events: all;
   cursor: pointer;
-  grid-row: 6/12;
+  grid-row: 3/6;
   position: relative;
   height: 100%;
 }
@@ -341,6 +340,7 @@ header {
   z-index: 999;
   top: 0;
   left: 0;
+  /* display: none; */
 }
 .slider-margin-auto {
   background-color: rgb(255, 255, 255);
@@ -423,7 +423,7 @@ header {
 .bakhsh-bandi {
   top: 78px;
   background-color: var(--white);
-  z-index: 998;
+  z-index: 997;
   width: 100%;
 }
 .bakhsh-bandi > div {
@@ -434,6 +434,7 @@ header {
 }
 .kojay-safhe-alaghe {
   display: flex;
+
   align-items: center;
   transition: 0.3s all linear;
   border-bottom: 1px solid #eeeeee;
@@ -486,7 +487,8 @@ header {
   height: inherit;
   display: flex;
   flex-direction: column;
-  flex: 9;
+
+  width: 70%;
 }
 /* moshakhasat-khone */
 .moshakhasat-khone {
@@ -508,7 +510,7 @@ header {
   display: flex;
   gap: 20px;
 }
-.mizbani > div > article {
+.mizbani > div > img {
   width: 53px;
   height: 53px;
   background-color: var(--lightgray);
@@ -668,6 +670,7 @@ header {
   display: flex;
   align-items: center;
   column-gap: 150px;
+  justify-content: start;
   padding: 20px 0;
 }
 .anten-dehi > .irancel-hamrahAval > div {
@@ -1086,11 +1089,12 @@ header {
   align-items: center;
   justify-content: space-between;
   color: black;
+  column-gap: 20px;
 }
 .days > div {
   display: grid;
   grid-template-columns: repeat(7, 1fr);
-  width: 310px;
+  width: 100%;
   height: 100%;
   align-items: center;
   gap: 5px;
@@ -1104,7 +1108,7 @@ header {
 /* taghvim */
 /* tamam-moshakhasat-geymat-sticy */
 .tamam-moshakhasat-geymat-sticy {
-  flex: 4;
+  width: 30%;
 }
 .tamam-moshakhasat-geymat-sticy > div {
   display: flex;
@@ -1437,8 +1441,63 @@ footer {
   padding: 10px 0;
 }
 /* footer */
-
-/* @media (max-width: 1287px) {
+.geymat-sticky-media {
+  height: 72px;
+  padding: 10px;
+  position: fixed;
+  width: 100%;
+  border-top: 1px solid #ebebeb;
+  bottom: 0;
+  left: 0;
+  background-color: var(--white);
+  display: none;
+  justify-content: space-between;
+  z-index: 999;
+}
+.geymat-sticky-media > div {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+.geymat-sticky-media > div > p {
+  gap: 5px;
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  height: 25px;
+  justify-content: center;
+}
+.geymat-sticky-media > div > span {
+  font-size: 14px;
+  display: flex;
+  height: 25px;
+  align-items: center;
+  gap: 5px;
+}
+.geymat-sticky-media > div > span > i {
+  font-size: 12px;
+  color: var(--abisite);
+}
+.geymat-sticky-media > button {
+  padding: 25px 30px;
+  height: 40px;
+  border-radius: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  background-color: var(--abisite);
+  color: var(--white);
+  font-size: 16px;
+}
+/*  */
+.slider-700 {
+  border-radius: 0;
+  width: 100%;
+  height: 500px;
+  display: none;
+}
+@media (max-width: 1287px) {
   .sad-darsad > div {
     width: 100%;
     margin: 0 auto;
@@ -1455,7 +1514,17 @@ footer {
     grid-template-columns: repeat(3, 1fr);
   }
 }
-@media (max-width: 990px) {
+
+@media (max-width: 1000px) {
+  .tamam-moshakhasat-geymat-sticy {
+    display: none;
+  }
+  .geymat-sticky-media {
+    display: flex;
+  }
+  .tamam-moshakhasat-itemha {
+    width: 100%;
+  }
   .sad-darsad > div {
     width: 100%;
     margin: 0 auto;
@@ -1472,34 +1541,7 @@ footer {
     width: 100%;
     max-width: 843px;
   }
-  .hashtagh-ha {
-    display: none;
-  }
-  .relative {
-    height: 408px;
-  }
-  .paeinheader {
-    display: flex;
-    align-items: center;
-    justify-content: end;
-    flex-direction: column;
-    padding-bottom: 10px;
-  }
-  .inputhay-header > .name-shahr {
-    max-width: 430px;
-  }
-  .inputhay-header > .tarikh-safar {
-    width: 130px;
-  }
-  .inputhay-header > .tarikh-safar > span {
-    font-size: 12px;
-  }
-  .inputhay-header > .button-jostejo {
-    width: 100px;
-  }
-  .tanzim-tarikh {
-    transform: translate(-10px, 260px);
-  }
+
   .sabtnam > a {
     display: none;
   }
@@ -1518,19 +1560,7 @@ footer {
   .suggest > article:nth-of-type(4) {
     display: none;
   }
-  .sliderANDamar {
-    flex-direction: column;
-    align-items: center;
-  }
-  .eghmatgah-bartar-slider {
-    width: 100%;
-  }
-  .amarha {
-    display: flex;
-    gap: 10px;
-    flex-direction: column;
-    border: none;
-  }
+
   .itemha {
     padding: 15px 20px;
     border-radius: 18px;
@@ -1586,73 +1616,163 @@ footer {
   .close {
     display: flex;
   }
-  header {
-    position: relative;
-  }
+
   .inputhay-header {
     margin: 20px;
     width: calc(100% - 30px);
-    max-width: 430px;
+    max-width: 600px;
     height: 60px;
   }
-  .khat-space {
-    display: none;
-  }
-  .inputhay-header > .name-shahr {
-    width: 100%;
-  }
-  .inputhay-header > .tarikh-safar {
-    display: none;
-  }
-  .inputhay-header > .teadad-nafarat {
-    display: none;
-  }
-  .inputhay-header > .button-jostejo {
-    display: none;
-  }
   .flex {
-    max-width: 112px;
+    max-width: 400px;
   }
 }
-@media (max-width: 767px) {
+@media (max-width: 768px) {
+  .img-houses {
+    display: none;
+  }
+  .slider-700 {
+    display: block;
+  }
   .sad-darsad > div {
     padding: 0;
     max-width: 540px;
   }
+  .kojay-safhe {
+    width: 100%;
+    justify-content: space-evenly;
+  }
+  .alaghemandi-eshtrak {
+    display: none;
+  }
+  .mizbani {
+    flex-direction: column;
+    gap: 15px;
+  }
+  .mizbani > .amar-emtiaz-nazar-pishnahad {
+    width: 90%;
+    align-items: center;
+    justify-content: space-evenly;
+  }
+  .mizbani > div:nth-child(1) {
+    width: 90%;
+  }
+  .moshakhasat-koli > div.title {
+    flex-direction: column;
+    gap: 10px;
+    align-items: start;
+  }
+  .irancel-hamrahAval {
+    flex-direction: column;
+    gap: 20px;
+  }
+  .irancel-hamrahAval > div {
+    justify-content: start;
+    width: 100%;
+  }
+  .item-emkanat {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(6, 50px);
+  }
+  .otagh-services > div.item {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 120px);
+  }
+  .ghavanin > div {
+    flex-direction: column;
+  }
+  .balay-commentha {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+  }
+  .commentha {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .suggest {
+    display: none;
+  }
+  .tanzim-tarikh {
+    width: 100%;
+    height: 100%;
+  }
+  .hafte > div {
+    width: 100%;
+    padding: 0 40px;
+  }
+  .tanzim-tarikh > .border > .days > #daysha2 {
+    display: none;
+  }
+  .hafte > div:nth-child(2) {
+    display: none;
+  }
+
+  .tanzim-tarikh > .border > .mah-sal > .target:nth-child(2) {
+    display: none;
+  }
+
+  .days > div {
+    grid-template-columns: repeat(6, 1fr);
+    height: 100%;
+    place-items: center;
+  }
+  .daysadad {
+    width: 100%;
+    padding: 15px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
 }
 @media (max-width: 576px) {
+  .bakhsh-bandi {
+    top: 0;
+  }
+  header {
+    display: none;
+  }
   .eghmatgah-bartar-slider {
     padding: 0;
   }
-  li > p {
-    font-size: 11px !important;
+}
+@media (max-width: 430px) {
+  .bakhsh-bandi {
+    font-size: 14px;
   }
-  .ejareha > .samtChap {
-    display: none;
+  .kojay-safhe {
+    gap: 10px;
   }
-  .hoghogh-site-text {
-    font-size: 12px;
-    text-align: center;
+  .geymat-sticky-media {
+    align-items: center;
   }
-  .suggest > article > h3 {
-    font-size: 11px;
-    text-align: center;
+  .geymat-sticky-media > button {
+    padding: 15px 20px;
   }
-  ::before {
-    display: none;
+  .mizbani > .amar-emtiaz-nazar-pishnahad {
+    width: 100%;
   }
-  i::before {
-    display: block;
+  .mizbani > div > div {
+    margin: 0;
   }
-  .title-swiper {
-    justify-content: space-evenly;
+  .mizbani > div > div > p {
+    font-size: 14px;
   }
-  .title-swiper > a {
-    font-size: 11px;
-    gap: 5px;
+  .item-emkanat {
+    grid-template-columns: repeat(1, 1fr);
+    gap: 15px;
   }
-  .title-swiper > h1 {
+  .divNameANDpishnahadANDimg > img {
+    transform: scale(0.9);
+  }
+  .divNameANDpishnahad {
+    align-items: center;
+  }
+  .divNameANDpishnahad > p {
     font-size: 13px;
   }
-} */
+  .divNameANDpishnahad > span {
+    padding: 2px 4px;
+  }
+}
 /* respansive */

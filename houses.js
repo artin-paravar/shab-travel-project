@@ -1,3 +1,15 @@
+var swiper = new Swiper(".slider-700", {
+  pagination: {
+    el: ".swiper-pagination",
+    clickable: true,
+  },
+});
+var swiper = new Swiper(".swiper", {
+  navigation: {
+    nextEl: ".swiper-button-next7",
+    prevEl: ".swiper-button-prev7",
+  },
+});
 let inputnameShahrchecked2 = document.querySelector(".name-shahr-checked2");
 
 let jostejoinput = document.getElementById("jostejo-input");
@@ -8,22 +20,26 @@ jostejoinput.addEventListener("click", () => {
 // button
 let btn = document.querySelectorAll(".plus-mines");
 let input = document.getElementById("tedad");
-let adad = 1;
+let adad = 0;
 btn.forEach((plusANDmines) => {
   plusANDmines.addEventListener("click", (item) => {
     if (item.target.innerText === "+") {
-      input.innerText = `${adad++} نفر`;
+      adad++;
+      input.innerText = `${adad} نفر`;
     } else {
-      input.innerText = `${adad--} نفر`;
+      adad--;
+      input.innerText = `${adad} نفر`;
     }
     if (adad <= 0) {
       let mines = document.getElementById("mines");
       mines.style.backgroundColor = "var(--lightgray)";
       mines.style.color = "var(--gray)";
       adad = 0;
+      input.innerText = `0 نفر`;
     } else if (adad >= 6) {
       let plus = document.getElementById("plus");
       plus.style.backgroundColor = "var(--lightgray)";
+      input.innerText = `6 نفر`;
       plus.style.color = "var(--gray)";
       adad = 6;
     } else {
@@ -34,6 +50,7 @@ btn.forEach((plusANDmines) => {
       plus.style.backgroundColor = "#f0efff";
       plus.style.color = "var(--abisite)";
     }
+    console.log(adad);
   });
 });
 // button
@@ -430,12 +447,7 @@ DIVsamtChap.forEach((itemha) => {
 ///////footer
 
 // slider
-var swiper = new Swiper(".swiper", {
-  navigation: {
-    nextEl: ".swiper-button-next7",
-    prevEl: ".swiper-button-prev7",
-  },
-});
+
 let imgclick = document.querySelectorAll("#imgha-click");
 let swiperWrapper = document.getElementById("img-houses-slider");
 let imgSlider = document.querySelectorAll("#img-slider");
@@ -460,46 +472,18 @@ imgclick.forEach((imgha) => {
     if (imgha.src === imgSlider[0].src) {
       swiperWrapper.style.transform = "translate3d(0, 0, 0)";
       swiperWrapper.style.transition = "0.3s all";
-      imgSlider[0].className = "swiper-slide tanzim-slider swiper-slide-active";
-      imgSlider[1].className = "swiper-slide tanzim-slider swiper-slide-next";
-      imgSlider[2].className = "swiper-slide tanzim-slider";
-      imgSlider[3].className = "swiper-slide tanzim-slider";
-      imgSlider[4].className = "swiper-slide tanzim-slider";
     } else if (imgha.src === imgSlider[1].src) {
       swiperWrapper.style.transition = "0.3s all";
       swiperWrapper.style.transform = "translate3d(768px, 0, 0)";
-
-      imgSlider[0].className = "swiper-slide tanzim-slider swiper-slide-prev";
-      imgSlider[1].className = "swiper-slide tanzim-slider swiper-slide-active";
-      imgSlider[2].className = "swiper-slide tanzim-slider swiper-slide-next";
-      imgSlider[3].className = "swiper-slide tanzim-slider";
-      imgSlider[4].className = "swiper-slide tanzim-slider";
     } else if (imgha.src === imgSlider[2].src) {
       swiperWrapper.style.transform = "translate3d(1536px, 0, 0)";
       swiperWrapper.style.transition = "0.3s all";
-      imgSlider[0].className = "swiper-slide tanzim-slider";
-      imgSlider[1].className = "swiper-slide tanzim-slider swiper-slide-prev";
-      imgSlider[2].className = "swiper-slide tanzim-slider swiper-slide-active";
-      imgSlider[3].className = "swiper-slide tanzim-slider swiper-slide-next";
-      imgSlider[4].className = "swiper-slide tanzim-slider";
     } else if (imgha.src === imgSlider[3].src) {
       swiperWrapper.style.transform = "translate3d(2304px, 0, 0)";
       swiperWrapper.style.transition = "0.3s all";
-
-      imgSlider[0].className = "swiper-slide tanzim-slider";
-      imgSlider[1].className = "swiper-slide tanzim-slider";
-      imgSlider[2].className = "swiper-slide tanzim-slider swiper-slide-prev";
-      imgSlider[3].className = "swiper-slide tanzim-slider swiper-slide-active";
-      imgSlider[4].className = "swiper-slide tanzim-slider swiper-slide-next";
     } else if (imgha.src === imgSlider[4].src) {
       swiperWrapper.style.transform = "translate3d(3072px, 0, 0)";
       swiperWrapper.style.transition = "0.3s all";
-
-      imgSlider[0].className = "swiper-slide tanzim-slider";
-      imgSlider[1].className = "swiper-slide tanzim-slider";
-      imgSlider[2].className = "swiper-slide tanzim-slider";
-      imgSlider[3].className = "swiper-slide tanzim-slider swiper-slide-prev";
-      imgSlider[4].className = "swiper-slide tanzim-slider swiper-slide-active";
     }
   });
 });
@@ -518,3 +502,14 @@ function remove() {
   });
 }
 // slider
+
+let imgHouse = document.querySelector(".img-houses");
+let imgHouse760 = document.querySelector(".slider-media-760");
+
+if (window.innerWidth <= 768) {
+  imgHouse.id = "";
+  imgHouse760.id = "tasavir";
+} else {
+  imgHouse760.id = "";
+  imgHouse.id = "tasavir";
+}
