@@ -201,31 +201,6 @@ let header = document.querySelector("header");
 let jostejo = document.querySelector(".jostejo");
 let textTagA = document.querySelector(".sabtnam > a");
 
-window.addEventListener("scroll", () => {
-  if (window.pageYOffset >= 250) {
-    header.classList.add("header-scroll");
-    textTagA.style.color = "black";
-    jostejo.classList.remove("hidden");
-  } else {
-    textTagA.style.color = "white";
-    inputnameShahrchecked2.classList.add("hidden");
-    jostejo.classList.add("hidden");
-    header.classList.remove("header-scroll");
-  }
-  let inputhayHeader = document.getElementById("inputhay-header");
-  if (window.pageYOffset >= 300) {
-    inputhayHeader.className = "inputhayheaderJs";
-    ////
-    inputnameShahr.style.border = "1px solid var(--boderSwiper2)";
-  } else {
-    inputhayHeader.className = "inputhay-header";
-    inputnameShahr.style.border = "none";
-  }
-});
-
-////////////////////////////
-//////////////////////////
-
 ////////////////////////
 let inputnameShahrchecked2 = document.querySelector(".name-shahr-checked2");
 
@@ -359,19 +334,7 @@ esmshahr.forEach((div) => {
 ///////data for swiper
 
 //////
-let closeItem = document.getElementById("close");
-if (window.innerWidth <= 829) {
-  inputnameShahr.addEventListener("click", () => {
-    inputnameShahrchecked.className = "aha";
-    header.style.zIndex = "0";
-    inputnameShahr.style.border = "none";
-  });
-}
-closeItem.addEventListener("click", () => {
-  inputnameShahrchecked.classList.add("hidden");
-  header.style.zIndex = "999";
-  body.style.overflow = "auto";
-});
+
 let dataSwiper = [
   {
     id: 1,
@@ -1292,3 +1255,43 @@ DIVsamtChap.forEach((itemha) => {
   divasli.appendChild(a);
 });
 ////////////// data for EJARE
+
+window.addEventListener("scroll", () => {
+  if (window.pageYOffset >= 250) {
+    header.classList.add("header-scroll");
+    textTagA.style.color = "black";
+    jostejo.classList.remove("hidden");
+  } else {
+    textTagA.style.color = "white";
+    inputnameShahrchecked2.classList.add("hidden");
+    jostejo.classList.add("hidden");
+    header.classList.remove("header-scroll");
+  }
+  if (window.innerWidth <= 829) {
+    let inputhayHeader = document.getElementById("inputhay-header");
+    if (window.pageYOffset >= 300) {
+      inputhayHeader.className = "inputhayheaderJs";
+      ////
+      inputnameShahr.style.border = "1px solid var(--boderSwiper2)";
+    } else {
+      inputhayHeader.className = "inputhay-header";
+      inputnameShahr.style.border = "none";
+    }
+  }
+});
+
+////////////////////////////
+//////////////////////////
+let closeItem = document.getElementById("close");
+if (window.innerWidth <= 829) {
+  inputnameShahr.addEventListener("click", () => {
+    inputnameShahrchecked.className = "aha";
+    header.style.zIndex = "0";
+    inputnameShahr.style.border = "none";
+  });
+}
+closeItem.addEventListener("click", () => {
+  inputnameShahrchecked.classList.add("hidden");
+  header.style.zIndex = "999";
+  body.style.overflow = "auto";
+});
