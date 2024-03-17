@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>اجاره ویلا و سوئیت</title>
+    <link rel="icon" href="img/shab.logo.svg" />
+    <link rel="stylesheet" href="city.css" />
+    <link rel="stylesheet" href="swiper/swiper-bundle.min.css" />
+  </head>
+  <body>
+    <header>
+      <div class="padding-margin">
+        <div class="header">
+          <div class="flex">
+            <img src="img/shab.logo.svg" class="logo" alt="logo" />
+            <div class="jostejo">
+              <input
+                type="text"
+                placeholder="جستجوی شهر یا کد آگهی"
+                name=""
+                id="jostejo-input"
+              />
+              <button>
+                <i class="fa-solid fa-magnifying-glass i-black"></i>
+              </button>
+            </div>
+          </div>
+          <div class="name-shahr-checked2 hidden" id="name-shahr-jostejo">
+            <h3>شهرهای پرطرفدار</h3>
+            <div class="esm-shahrha">
+              <div><i class="fa-solid fa-location-dot"></i></div>
+              <h5>تهران</h5>
+            </div>
+            <div class="esm-shahrha">
+              <div><i class="fa-solid fa-location-dot"></i></div>
+              <h5>کردان</h5>
+            </div>
+            <div class="esm-shahrha">
+              <div><i class="fa-solid fa-location-dot"></i></div>
+              <h5>رامسر</h5>
+            </div>
+            <div class="esm-shahrha">
+              <div><i class="fa-solid fa-location-dot"></i></div>
+              <h5>رشت</h5>
+            </div>
+            <div class="esm-shahrha">
+              <div><i class="fa-solid fa-location-dot"></i></div>
+              <h5>مشهد</h5>
+            </div>
+          </div>
+          <div class="sabtnam">
+            <a href="#">میزبان شوید</a>
+            <div class="login">
+              <p>ورود | ثبت نام</p>
+              <i class="fa-solid fa-right-from-bracket i-white"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <!-- start -->
+    <div class="padding-margin">
+      <div class="filter">
+        <h1>اجاره ویلا و سوئیت</h1>
+        <div class="moratab-sazi">
+          <div>
+            <span>مرتب‌سازی:</span>
+            <p class="active" id="filter">همه</p>
+            <p id="filter">محبوب‌ترین</p>
+            <p id="filter">ارزان‌ترین</p>
+          </div>
+          <div>
+            <p id="peida-shode"></p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- api -->
+    <div class="padding-margin">
+      <div class="khoneha" id="khoneha"></div>
+      <div class="khoneha" id="khoneha2"></div>
+      <div class="khoneha" id="khoneha3"></div>
+    </div>
+    <!-- api -->
+    <hr style="margin: 60px 0 30px; opacity: 0.3" />
+    <div class="footer">
+      <h2>اجاره سوئیت در تهران</h2>
+      <p>
+        یکی از کلان شهرهای مهم و پرجمعیت ایران، شهر تهران است. این شهر پر جمعیت
+        دارای جاذبه‌های گردشگری‌ و تفریحی بسیاری است که با اجاره سوئیت در تهران
+        می‌توان به راحتی به آن‌ها دسترسی داشت. برای مثال می‌توان به کاخ سعد
+        آباد، پارک نیاوران، دریاچه چیتگر اشاره کرد. از مزایای اجاره سوئیت در
+        تهران می توان به کاهش هزینه‌ها و سهولت در نحوه رزرو آن اشاره نمود، که به
+        راحتی می‌توانید از این صفحه و آنلاین اقدام نمایید
+      </p>
+      <h2>اجاره روزانه خانه و آپارتمان مبله در تهران</h2>
+      <p>
+        از مزایای اجاره روزانه خانه در تهران چه برای مجردها و چه برای متاهل ها،
+        می‌توان به مناسب بودن با هر نوع بودجه و سلیقه را نام برد، علاوه برآن
+        مقرون به صرفه بودن هزینه اجاره آپارتمان مبله در تهران و راحتی در نحوه
+        رزرو آنلاین و پشتیبانی پس از رزرو تا پایان سفر نیز از دیگر مزیت‌ها نسبت
+        به هتل به شمار می‌رود.. دسترسی راحت و آسان به مرکز شهر و اماکن تفریحی
+        پایتخت، مانند
+      </p>
+    </div>
+
+    <script
+      src="https://kit.fontawesome.com/9e4e574267.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="swiper/swiper-bundle.min.js"></script>
+
+    <script src="city.js"></script>
+    <script>
+      var swiper = new Swiper(".mySwiper", {
+        slidesPerView: 1,
+        spaceBetween: 0,
+        loop: true,
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+        },
+        navigation: {
+          nextEl: ".swiper-button-next8",
+          prevEl: ".swiper-button-prev8",
+        },
+      });
+    </script>
+  </body>
+</html>

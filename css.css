@@ -771,6 +771,7 @@ header {
   max-width: 165px;
   min-width: 80px;
   height: 190px !important;
+  text-decoration: none;
   background-color: var(--lightgray);
   border-radius: 15px;
   font-size: 15px;
